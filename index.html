@@ -157,17 +157,79 @@
 
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials Section-->
     <section id="testimonials" class="px-4 py-16 pt-20 relative space-y-4 bg-neutral-50">
       <h3 class="font-playwrite text-madrasaPurple">Testimonials</h3>
+      <h1 class="font-poltawsky font-medium text-3xl text-neutral-800 px-8">
+        What our happy <br> users say.
+      </h1>
+
+      <!-- Testimonial cards -->
+      <div class="p-4 pt-20 py-5 relative"
+        style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
+        <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
+          class="absolute w-full top-0">
+        <!-- card content -->
+        <div class="space-y-6 z-10 text-left">
+          <p class="text-neutral-800">
+            Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim community—offering
+            everything
+            from education
+          </p>
+          <div class="flex w-full justify-between items-stretch">
+            <div>
+              <p class="font-semibold text-neutral-900">Justus Menke</p>
+              <p class="font-medium text-xs text-neutral-400">CEO Eronaman</p>
+            </div>
+            <img src="https://loremflickr.com/1280/720" alt="Justus Menke"
+              class="max-w-11 object-cover rounded-full aspect-square">
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 pt-20 py-5 rounded-xl relative"
+        style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
+        <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
+          class="absolute w-full top-0">
+        <!-- card content -->
+        <div class="space-y-6 z-10 text-left">
+          <p class="text-neutral-800">
+            Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim community—offering
+            everything
+            from education
+          </p>
+          <div class="flex w-full justify-between items-stretch">
+            <div>
+              <p class="font-semibold text-neutral-900">Justus Menke</p>
+              <p class="font-medium text-xs text-neutral-400">CEO Eronaman</p>
+            </div>
+            <img src="https://loremflickr.com/1280/720" alt="Justus Menke"
+              class="max-w-11 object-cover rounded-full aspect-square">
+          </div>
+        </div>
+      </div>
+
+      <button class="flex gap-1.5 rounded-full mx-auto bg-violet-100 px-4 py-2.5 items-center justify-center">
+        <p class="font-geist font-semibold text-violet-700 text-center`">
+          Load More Content
+        </p>
+        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.5 7.5L10.5 12.5L15.5 7.5" stroke="#6D2DD3" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+
 
 
     </section>
 
-    <!-- More features -->
+    <!-- More features Section -->
     <section id="more features" class="px-4 py-16 pt-20 relative space-y-4 bg-neutral-50">
       <h3 class="font-playwrite text-madrasaPurple">More Features</h3>
 
+      <h1 class="font-poltawsky font-medium text-3xl text-neutral-800 px-8">
+        We still have much more for ummah
+      </h1>
 
     </section>
 
@@ -221,9 +283,60 @@
         <h1 class="font-poltawsky font-medium text-3xl text-neutral-800">
           Still have any queries connect with us?
         </h1>
-        <!-- Form -->
       </div>
+      <!-- Form -->
 
+      <form action="#" method="post" class="space-y-4 text-left px-4">
+        <!-- First Name -->
+        <div>
+          <label for="first-name" class="block text-sm font-semibold text-gray-500">First name</label>
+          <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required
+            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2" />
+        </div>
+      
+        <!-- Last Name -->
+        <div>
+          <label for="last-name" class="block text-sm font-semibold text-gray-500">Last name</label>
+          <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required
+            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2" />
+        </div>
+      
+        <!-- Email Address -->
+        <div>
+          <label for="email" class="block text-sm font-semibold text-gray-500">Email address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required
+            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2" />
+        </div>
+      
+        <!-- Phone Number -->
+        <div>
+          <label for="phone" class="block text-sm font-semibold text-gray-500">Phone number</label>
+          <div class="flex items-stretch mt-1">
+            <span
+              class="inline-flex items-center px-3 rounded-l-md border border-r-0  bg-gray-100 text-gray-500 text-sm">
+              🇮🇳 +91
+            </span>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required
+              class="flex-1 block w-full rounded-r-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2" />
+          </div>
+        </div>
+      
+        <!-- Message -->
+        <div>
+          <label for="message" class="block text-sm font-semibold text-gray-500">Add message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write your query here..."
+            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2"></textarea>
+        </div>
+      
+        <!-- Submit Button -->
+        <div>
+          <button type="submit"
+            class="bg-madrasaPurple font-geist font-semibold text-white py-2.5 self-stretch w-full shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 text-sm">
+            Submit
+          </button>
+        </div>
+      </form>
+      
     </section>
 
   </div>
