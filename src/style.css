@@ -150,17 +150,27 @@ button:focus-visible {
 
 /* CODE FOR THE FAQ Animation */
 svg {
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease-in;
 }
 
 /* Transition for FAQ answer expansion */
 .faq-answer {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.6s ease;
+  transition: max-height 0.4s ease;
 }
 
 /* Expanded state for the FAQ answer */
 .faq-answer.open {
   max-height: 300px;
+}
+
+.faq-item
+{
+  transition: all 0.3s ease;
+}
+
+.faq-question
+{
+  transition: all 0.4s ease;
 }
