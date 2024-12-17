@@ -71,7 +71,7 @@
         <h1 class="font-poltawsky font-medium text-3xl">Madrasa an app for muslim community</h1>
       </div>
 
-      <img src="/about-icon.svg" alt="madarsa logo illuminated">
+      <img src="/about-icon.svg" alt="madrasa logo illuminated">
 
       <div class="px-2 text-neutral-300">
         <p>Madrasa App is a holistic platform for Muslims, offering Islamic education, counseling, worship tools, and
@@ -128,7 +128,7 @@
         <div class="bg-sky-50 space-y-2 p-4 pb-8 rounded-xl">
           <div class="w-full overflow-x-auto whitespace-nowrap no-scrollbar">
             <img src="./src/images/Islamic-events-mobile.png" alt="online learning in Madrasa"
-              class="inline-block w-auto max-w-none">
+              class="inline-block max-h-72 w-auto max-w-none">
           </div>
 
           <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Islamic Events</h3>
@@ -165,12 +165,12 @@
       </h1>
 
       <!-- Testimonial cards -->
-      <div class="p-4 pt-20 py-5 relative"
+      <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border"
         style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
         <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
           class="absolute w-full top-0">
         <!-- card content -->
-        <div class="space-y-6 z-10 text-left">
+        <div class="space-y-6 z-10 text-left relative">
           <p class="text-neutral-800">
             Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim community—offering
             everything
@@ -187,12 +187,12 @@
         </div>
       </div>
 
-      <div class="p-4 pt-20 py-5 rounded-xl relative"
+      <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border"
         style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
         <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
           class="absolute w-full top-0">
         <!-- card content -->
-        <div class="space-y-6 z-10 text-left">
+        <div class="space-y-6 z-10 text-left relative">
           <p class="text-neutral-800">
             Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim community—offering
             everything
@@ -231,12 +231,24 @@
         We still have much more for ummah
       </h1>
 
+      
+      
     </section>
 
 
     <!-- FAQ -->
     <section id="FAQ" class="px-4 py-16 pt-20 relative space-y-4 bg-neutral-50">
       <h3 class="font-playwrite text-madrasaPurple">Frequently Asked Questions</h3>
+
+      <!-- Category Tabs -->
+      <div id="faq-categories" class="flex items-center gap-2.5 overflow-x-auto no-scrollbar p-0.5 py-4">
+      </div>
+
+      <!-- FAQ Container -->
+      <div id="faq-container" class="space-y-3">
+        <!-- FAQs will be injected here -->
+      </div>
+
     </section>
 
 
@@ -265,7 +277,7 @@
         </p>
       </div>
 
-      <!-- <img src="" alt=""> -->
+      <img src="./src/./images/serve-ummah.png" alt="All the tools" class="py-9 md:hidden">
 
       <button class="bg-madrasaPurple font-geist font-semibold text-white py-2.5 self-stretch w-full">
         Join Our Team
@@ -291,23 +303,23 @@
         <div>
           <label for="first-name" class="block text-sm font-semibold text-gray-500">First name</label>
           <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required
-            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2" />
+            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
         </div>
-      
+
         <!-- Last Name -->
         <div>
           <label for="last-name" class="block text-sm font-semibold text-gray-500">Last name</label>
           <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required
-            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2" />
+            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
         </div>
-      
+
         <!-- Email Address -->
         <div>
           <label for="email" class="block text-sm font-semibold text-gray-500">Email address</label>
           <input type="email" id="email" name="email" placeholder="Enter your email address" required
-            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2" />
+            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
         </div>
-      
+
         <!-- Phone Number -->
         <div>
           <label for="phone" class="block text-sm font-semibold text-gray-500">Phone number</label>
@@ -317,17 +329,17 @@
               🇮🇳 +91
             </span>
             <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required
-              class="flex-1 block w-full rounded-r-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2" />
+              class="flex-1 block w-full rounded-r-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
           </div>
         </div>
-      
+
         <!-- Message -->
         <div>
           <label for="message" class="block text-sm font-semibold text-gray-500">Add message</label>
           <textarea id="message" name="message" rows="4" placeholder="Write your query here..."
-            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2"></textarea>
+            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800"></textarea>
         </div>
-      
+
         <!-- Submit Button -->
         <div>
           <button type="submit"
@@ -336,9 +348,17 @@
           </button>
         </div>
       </form>
-      
+
     </section>
 
+
+    <footer class="px-5 bg-violet-50 py-6 space-y-4">
+      <img src="/logo-colored.svg" alt="madrasa colored logo" class="mx-auto py-2">
+      <p class="text-sm text-neutral-400">
+        Copyright © 2024 Madrasa App<br>
+        All Rights Reserved
+      </p>
+    </footer>
   </div>
   <script type="module" src="/src/main.ts"></script>
 </body>
