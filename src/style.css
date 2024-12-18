@@ -165,12 +165,34 @@ svg {
   max-height: 300px;
 }
 
-.faq-item
-{
+.faq-item {
   transition: all 0.3s ease;
 }
 
-.faq-question
-{
+.faq-question {
   transition: all 0.4s ease;
+}
+
+/* Bg for Hero */
+.hero-bg {
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.00) 22.07%,
+      rgba(0, 0, 0, 0.85) 68%),
+    url('./images/hero.jpeg') left 25% center / cover no-repeat;
+  transform: scaleX(-1);
+  height: 100svh;
+}
+
+@media (min-width: 1024px) {
+  .hero-bg {
+    background: linear-gradient(90deg,
+        rgba(0, 0, 0, 0.00) 30%,
+        rgba(0, 0, 0, 0.86) 64%),
+      url('./images/hero.jpeg') left 25% center / cover no-repeat;
+    transform: scaleX(-1);
+  }
+}
+
+.more-features-container div:nth-child(2n+1) {
+  flex-direction: row;
 }

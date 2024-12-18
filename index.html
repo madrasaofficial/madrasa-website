@@ -12,7 +12,7 @@
   <div id="app">
 
     <!-- Top Bar -->
-    <header class="px-4 md:px-8 flex absolute z-10 w-full items-center justify-between top-8">
+    <header class="px-4 md:px-8 flex absolute z-10 w-full items-center justify-between top-8 lg:px-24">
       <img src="/logo.svg" alt="Madrasa Logo">
       <menu
         class="bg-purple-50 text-purple-800 font-medium font-geist flex items-center gap-1.5 w-max px-3 py-1.5 rounded-3xl tracking-tight md:hidden">
@@ -26,35 +26,33 @@
 
 
     <!-- Hero Section -->
-    <section class="relative h-svh text-white flex flex-col items-center justify-end py-8">
+    <section
+      class="relative h-svh text-white flex flex-col items-center justify-end py-8 lg:justify-center lg:items-baseline lg:text-left lg:px-24">
       <!-- Background -->
-      <div class="absolute inset-0 w-full h-full" style="
-            background: 
-              linear-gradient(180deg, rgba(0, 0, 0, 0.00) 22.07%, rgba(0, 0, 0, 0.85) 68%), 
-              url('./src/images/hero.jpeg') left 25% center / cover no-repeat;
-            transform: scaleX(-1);
-          ">
+      <div class="absolute inset-0 w-full h-full hero-bg">
       </div>
 
       <!-- Content -->
-      <div class="px-6 z-10 space-y-1.5 md:max-w-xl">
-        <img src="/madrasa-text.svg" alt="Madrasa written in Arabic" class="mx-auto">
-        <h2 class="font-poltawsky text-4xl font-medium leading-10 text-center pb-3">
-          Connecting the Ummah <br class="hidden md:inline"> to Learn, Inspire, and Strengthen Faith
+      <div class="px-6 z-10 space-y-1.5 lg:space-y-2 md:max-w-xl md:px-0">
+        <img src="/madrasa-text.svg" alt="Madrasa written in Arabic" class="mx-auto lg:mx-0">
+        <h2 class="font-poltawsky text-4xl font-medium leading-10 text-center pb-3 lg:text-left">
+          Connecting the Ummah <br class="hidden md:inline"> to Learn, Inspire, and<br class="hidden lg:inline">
+          Strengthen Faith
         </h2>
-        <p class="font-geist text-base text-neutral-300 px-1 md:px-4 md:text-lg">
+        <p class="font-geist text-base text-neutral-300 px-1 md:px-4 md:text-lg lg:text-left lg:px-0 lg:max-w-xl">
           Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim community—offering
           everything
           from education and worship tools to lifestyle and travel solutions, all in one seamless platform.
         </p>
       </div>
-      <div class="z-10 pt-8 px-4 md:px-8 w-full space-y-3 md:flex md:gap-3 md:space-y-0 md:max-w-xl md:justify-center">
+      <div
+        class="z-10 pt-8 px-4 md:px-8 w-full space-y-3 md:flex md:gap-3 md:space-y-0 md:max-w-xl md:justify-center lg:px-0 lg:justify-start">
         <button
-          class="bg-madrasaPurple font-geist font-semibold text-white py-2.5 self-stretch w-full md:px-3 text-nowrap px-4">
+          class="bg-madrasaPurple font-geist font-semibold text-white py-2.5 self-stretch w-full md:px-3 text-nowrap px-4 lg:w-max lg:px-6">
           Join Madrasa community
         </button>
         <button
-          class="bg-white font-geist font-semibold text-madrasaPurple py-2.5 self-stretch w-full md:px-3 text-nowrap px-4">
+          class="bg-white font-geist font-semibold text-madrasaPurple py-2.5 self-stretch w-full md:px-3 text-nowrap px-4 lg:w-max lg:px-6">
           Contact Us
         </button>
       </div>
@@ -79,7 +77,7 @@
 
         <img src="/about-icon.svg" alt="madrasa logo illuminated" class="w-full">
 
-        <div class="px-2 text-neutral-300  md:text-lg">
+        <div class="px-2 text-neutral-300 md:text-lg">
           <p>Madrasa App is a holistic platform for Muslims, offering Islamic education, counseling, worship tools, and
             community
             engagement. From live classes and spiritual guidance to Umrah planning and news, it unites the Ummah through
@@ -93,14 +91,14 @@
     <!-- Features -->
     <section id="features" class="px-4 md:px-8 py-16 pt-20 relative bg-neutral-50">
       <!-- Content -->
-      <div class="space-y-4 md:space-y-8 md:max-w-xl md:mx-auto">
+      <div class="space-y-4 md:space-y-8 md:max-w-xl md:mx-auto lg:max-w-full lg:px-20">
 
-        <div class="px-8 space-y-2 z-10 text-neutral-50 pb-12 md:space-y-4">
+        <div class="px-8 space-y-2 z-10 text-neutral-50 pb-12 md:space-y-4 lg:max-w-2xl lg:mx-auto">
           <h3 class="font-playwrite md:text-lg text-madrasaPurple">Features</h3>
           <h1 class="font-poltawsky md:text-4xl font-bold text-3xl text-neutral-800">
-            Be a part of us to build for muslim community
+            Be a part of us to build for<br class="hidden lg:inline"> muslim community
           </h1>
-          <p class="text-neutral-600 px-2 py-2 md:text-lg md:text-lg">
+          <p class="text-neutral-600 px-2 py-2 md:text-lg">
             Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim community—offering
             everything
             from education and worship tools to lifestyle and travel solutions, all in one seamless platform.
@@ -108,74 +106,92 @@
         </div>
 
         <!-- Feature Cards -->
-        <div class="space-y-8 mx-auto">
+        <div class="space-y-8 mx-auto lg:grid lg:grid-cols-2 lg:gap-6 lg:space-y-0">
 
-          <div class="bg-amber-50 space-y-2 p-4 pb-8 rounded-xl border border-gray-200  md:pb-10">
-            <img src="./src/images/online-learning-img-mobile.png" alt="online learning in Madrasa" class="mx-auto">
-            <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Online learning</h3>
-            <p class="font-geist text-neutral-500 px-2 md:text-lg">
-              Madrasa App connects you with tutors for the Quran, Islamic studies, and languages. Learn online or
-              offline
-              at
-              your
-              convenience. Empower your faith and education effortlessly.
-            </p>
+          <div
+            class="bg-amber-50 space-y-2 p-4 pb-8 rounded-xl border border-gray-200 md:pb-10 lg:flex lg:flex-col lg:justify-evenly">
+            <img src="./src/images/online-learning-img-mobile.png" alt="online learning in Madrasa"
+              class="mx-auto lg:max-w-sm">
+            <div class="lg:max-w-lg lg:mx-auto">
+              <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Online learning</h3>
+              <p class="font-geist text-neutral-500 px-2 md:text-lg">
+                Madrasa App connects you with tutors for the Quran, Islamic studies, and languages. Learn online or
+                offline
+                at
+                your
+                convenience. Empower your faith and education effortlessly.
+              </p>
+            </div>
           </div>
-          <div class="bg-red-50 space-y-2 p-4 pb-8 rounded-xl border border-gray-200  md:pb-10">
-            <img src="./src/images/Online-consult-mobile.png" alt="online consultation in Madrasa" class="mx-auto">
-            <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Online consultation</h3>
-            <p class="font-geist text-neutral-500 px-2 md:text-lg">
-              Facing relationship or parenting challenges? Doubts, stress, or questions about life and faith? Connect
-              with
-              trusted
-              Islamic scholars online for guidance, clarity, and peace.
-            </p>
+          <div
+            class="bg-red-50 space-y-2 p-4 pb-8 rounded-xl border border-gray-200 md:pb-10 lg:flex lg:flex-col lg:justify-evenly">
+            <img src="./src/images/Online-consult-mobile.png" alt="online consultation in Madrasa"
+              class="mx-auto lg:max-w-md">
+            <div>
+              <div class="lg:max-w-lg lg:mx-auto">
+                <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Online consultation</h3>
+                <p class="font-geist text-neutral-500 px-2 md:text-lg">
+                  Facing relationship or parenting challenges? Doubts, stress, or questions about life and faith?
+                  Connect
+                  with
+                  trusted
+                  Islamic scholars online for guidance, clarity, and peace.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div class="bg-sky-50 space-y-2 p-4 pb-8 rounded-xl border border-gray-200  md:pb-10">
+          <div
+            class="bg-sky-50 space-y-2 p-4 pb-8 rounded-xl border border-gray-200 md:pb-10 lg:flex lg:flex-col lg:justify-evenly">
             <div class="w-full overflow-x-auto whitespace-nowrap no-scrollbar">
               <img src="./src/images/Islamic-events-mobile.png" alt="online learning in Madrasa"
                 class="inline-block max-h-72 w-auto max-w-none">
             </div>
 
-            <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Islamic Events</h3>
-            <p class="font-geist text-neutral-500 px-2 md:text-lg">
-              Madrasa App connects you with tutors for the Quran, Islamic studies, and languages. Learn online or
-              offline
-              at
-              your
-              convenience. Empower your faith and education effortlessly.
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-violet-50 space-y-2 p-4 px-0 pb-8 rounded-xl border border-gray-200  md:pb-10">
-          <div class="relative w-full h-60 overflow-hidden">
-            <img src="./src/images/Prayer-tools-mobile.png" alt="online learning in Madrasa"
-              class="absolute inset-0 h-full w-full object-cover object-center" />
+            <div class="lg:max-w-lg lg:mx-auto">
+              <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Islamic Events</h3>
+              <p class="font-geist text-neutral-500 px-2 md:text-lg">
+                Madrasa App connects you with tutors for the Quran, Islamic studies, and languages. Learn online or
+                offline
+                at
+                your
+                convenience. Empower your faith and education effortlessly.
+              </p>
+            </div>
           </div>
 
-          <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Prayer tools</h3>
-          <p class="font-geist text-neutral-500 px-2 md:text-lg">
-            Madrasa App offers tools like the Digital Quran, Namaz Alerts, Dua Collection, and Zakat Calculator. Stay
-            connected to
-            your faith effortlessly and strengthen your Imaan daily.
-          </p>
+          <div
+            class="bg-violet-50 space-y-2 p-4 px-0 pb-8 rounded-xl border border-gray-200 md:pb-10 lg:flex lg:flex-col lg:justify-evenly">
+            <div class="relative w-full h-60 overflow-hidden">
+              <img src="./src/images/Prayer-tools-mobile.png" alt="online learning in Madrasa"
+                class="absolute inset-0 h-full w-full object-cover object-center" />
+            </div>
+
+            <div class="lg:max-w-lg lg:mx-auto">
+              <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Prayer tools</h3>
+              <p class="font-geist text-neutral-500 px-2 md:text-lg">
+                Madrasa App offers tools like the Digital Quran, Namaz Alerts, Dua Collection, and Zakat Calculator.
+                Stay
+                connected to
+                your faith effortlessly and strengthen your Imaan daily.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
     </section>
 
     <!-- Testimonials Section-->
-    <section id="testimonials" class="px-4 md:px-8 py-16 pt-20 relative bg-neutral-50 md:pb-16">
+    <section id="testimonials" class="px-4 md:px-8 py-16 pt-20 relative bg-neutral-50 md:pb-16 ">
       <div class="space-y-4 md:space-y-8">
         <h3 class="font-playwrite md:text-lg text-madrasaPurple">Testimonials</h3>
         <h1 class="font-poltawsky md:text-4xl font-bold text-3xl text-neutral-800 px-8">
-          What our happy <br> users say.
+          What our happy <br class="inline lg:hidden"> users say.
         </h1>
 
         <!-- Testimonial cards -->
-        <div class="space-y-4 md:grid md:grid-cols-2 md:gap-4 md:space-y-0">
+        <div class="space-y-4 md:grid md:grid-cols-2 md:gap-4 md:space-y-0 lg:max-w-7xl lg:grid-cols-3 lg:mx-auto">
           <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border"
             style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
             <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
@@ -289,29 +305,31 @@
 
     <!-- More features Section -->
     <section id="more features" class="px-4 md:px-8 py-16 pt-20 relative bg-neutral-50">
-      <div class="space-y-4 md:space-y-6 md:max-w-xl md:mx-auto">
+      <div class="space-y-4 md:space-y-6 md:max-w-xl md:mx-auto lg:max-w-7xl lg:px-20">
 
         <h3 class="font-playwrite md:text-lg text-madrasaPurple">More Features</h3>
 
         <h1 class="font-poltawsky md:text-4xl font-bold text-3xl text-neutral-800 px-8">
-          We still have much more for ummah
+          We still have much more<br class="hidden lg:inline"> for ummah
         </h1>
 
         <!-- More Feature Cards -->
-        <div class="space-y-14">
+        <div class="space-y-14 lg:space-y-0 more-features-container">
 
-          <div>
-            <div class="bg-violet-200 pt-14 rounded-2xl my-6 md:mb-14 md:mt-8">
-              <img src="./src/images/iPhone Mockup.png" alt="mockup for Madrasa" class=" max-w-72 mx-auto">
+          <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center text-left lg:gap-10">
+            <div class="bg-violet-200 lg:bg-violet-100 pt-14 rounded-2xl my-6 md:mb-14 md:mt-8 lg:px-14">
+              <img src="./src/images/iPhone Mockup.png" alt="mockup for Madrasa" class=" max-w-72 mx-auto lg:max-w-64">
             </div>
             <!-- Card Content -->
-            <div class="px-2">
-              <h3 class="font-playwrite md:text-lg text-madrasaPurple txt-sm mb-1">Maktab - Find your Ustad</h3>
-              <p class="font-poltawsky font-bold text-3xl text-neutral-800 px-8 mb-2 md:my-2 md:px-10">
+            <div class="px-2 lg:max-w-lg">
+              <h3 class="font-playwrite lg:text-base md:text-lg text-madrasaPurple txt-sm mb-1">Maktab - Find your Ustad
+              </h3>
+              <p
+                class="font-poltawsky font-bold text-2xl text-neutral-900 leading-tight px-8 mb-2 md:my-2 md:px-10 lg:px-0">
                 Be a part of us to
                 build for <br class="hidden md:inline"> muslim community
               </p>
-              <p class="font-geist text-neutral-500 px-6 md:text-lg">
+              <p class="font-geist text-neutral-500 px-6 lg:text-base md:text-lg lg:px-0 lg:max-w-md">
                 Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim
                 community—offering
                 everything
@@ -320,18 +338,64 @@
             </div>
           </div>
 
-          <div>
-            <div class="bg-violet-200 pt-14 rounded-2xl my-6 md:mb-14 md:mt-8">
-              <img src="./src/images/iPhone Mockup.png" alt="mockup for Madrasa" class=" max-w-72 mx-auto">
+          <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center text-left lg:gap-10">
+            <div class="bg-violet-200 lg:bg-violet-100 pt-14 rounded-2xl my-6 md:mb-14 md:mt-8 lg:px-14">
+              <img src="./src/images/iPhone Mockup.png" alt="mockup for Madrasa" class=" max-w-72 mx-auto lg:max-w-64">
             </div>
             <!-- Card Content -->
-            <div class="px-2">
-              <h3 class="font-playwrite md:text-lg text-madrasaPurple txt-sm mb-1">Maktab - Find your Ustad</h3>
-              <p class="font-poltawsky font-bold text-3xl text-neutral-800 px-8 mb-2 md:my-2 md:px-10">
+            <div class="px-2 lg:max-w-lg">
+              <h3 class="font-playwrite lg:text-base md:text-lg text-madrasaPurple txt-sm mb-1">Maktab - Find your Ustad
+              </h3>
+              <p
+                class="font-poltawsky font-bold text-2xl text-neutral-900 leading-tight px-8 mb-2 md:my-2 md:px-10 lg:px-0">
                 Be a part of us to
                 build for <br class="hidden md:inline"> muslim community
               </p>
-              <p class="font-geist text-neutral-500 px-6 md:text-lg">
+              <p class="font-geist text-neutral-500 px-6 lg:text-base md:text-lg lg:px-0 lg:max-w-md">
+                Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim
+                community—offering
+                everything
+                from education and worship tools to lifestyle and travel solutions, all in one seamless platform.
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center text-left lg:gap-10">
+            <div class="bg-violet-200 lg:bg-violet-100 pt-14 rounded-2xl my-6 md:mb-14 md:mt-8 lg:px-14">
+              <img src="./src/images/iPhone Mockup.png" alt="mockup for Madrasa" class=" max-w-72 mx-auto lg:max-w-64">
+            </div>
+            <!-- Card Content -->
+            <div class="px-2 lg:max-w-lg">
+              <h3 class="font-playwrite lg:text-base md:text-lg text-madrasaPurple txt-sm mb-1">Maktab - Find your Ustad
+              </h3>
+              <p
+                class="font-poltawsky font-bold text-2xl text-neutral-900 leading-tight px-8 mb-2 md:my-2 md:px-10 lg:px-0">
+                Be a part of us to
+                build for <br class="hidden md:inline"> muslim community
+              </p>
+              <p class="font-geist text-neutral-500 px-6 lg:text-base md:text-lg lg:px-0 lg:max-w-md">
+                Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim
+                community—offering
+                everything
+                from education and worship tools to lifestyle and travel solutions, all in one seamless platform.
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center text-left lg:gap-10">
+            <div class="bg-violet-200 lg:bg-violet-100 pt-14 rounded-2xl my-6 md:mb-14 md:mt-8 lg:px-14">
+              <img src="./src/images/iPhone Mockup.png" alt="mockup for Madrasa" class=" max-w-72 mx-auto lg:max-w-64">
+            </div>
+            <!-- Card Content -->
+            <div class="px-2 lg:max-w-lg">
+              <h3 class="font-playwrite lg:text-base md:text-lg text-madrasaPurple txt-sm mb-1">Maktab - Find your Ustad
+              </h3>
+              <p
+                class="font-poltawsky font-bold text-2xl text-neutral-900 leading-tight px-8 mb-2 md:my-2 md:px-10 lg:px-0">
+                Be a part of us to
+                build for <br class="hidden md:inline"> muslim community
+              </p>
+              <p class="font-geist text-neutral-500 px-6 lg:text-base md:text-lg lg:px-0 lg:max-w-md">
                 Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim
                 community—offering
                 everything
@@ -366,7 +430,7 @@
 
 
     <!-- CTA for partners -->
-    <section id="partnerCTA" class="px-4 md:px-8 py-16 bg-purple-800 relative space-y-4 md:space-y-6"
+    <section id="partnerCTA" class="px-4 md:px-8 py-16 bg-purple-800 relative space-y-4 md:space-y-6 lg:space-y-10"
       style="background: var(--Gra, linear-gradient(165deg, #230C48 -31.86%, #130032 140.84%));">
       <!-- background element -->
       <!-- background element -->
@@ -380,9 +444,10 @@
       </div>
 
 
-      <div class="px-8 text-neutral-300 md:text-lg">
-        <img src="./src/./images/serve-ummah-wide.png" alt="All the tools" class="py-9 hidden md:block">
-        <p>
+      <div class="px-8 text-neutral-300 md:text-lg lg:max-w-7xl lg:mx-auto">
+        <img src="./src/./images/serve-ummah-wide.png" alt="All the tools"
+          class="py-9 hidden md:block object-scale-down">
+        <p class="lg:max-w-2xl lg:leading-snug lg:mx-auto">
           We invite technology, marketing, and social media professionals to join our mission of building Madrasa App—a
           transformative platform serving the Ummah. Contribute your expertise to foster education, spirituality, and
           community
@@ -394,6 +459,7 @@
 
       <img src="./src/./images/serve-ummah.png" alt="All the tools" class="py-9 md:hidden">
 
+
       <button
         class="bg-madrasaPurple font-geist font-semibold text-white py-2.5 self-stretch w-full md:px-14 text-nowrap px-4 md:w-max">
         Join Our Team
@@ -403,7 +469,7 @@
 
 
     <!-- Contact -->
-    <section id="contact" class="px-4 md:px-8 py-16 pt-20 relative space-y-4 bg-neutral-50">
+    <section id="contact" class="px-4 md:px-8 py-16 pt-20 relative space-y-4 lg:space-y-10 bg-neutral-50">
 
       <!-- Content -->
       <div class="px-8 space-y-2 z-10 text-neutral-50">
@@ -414,37 +480,38 @@
       </div>
       <!-- Form -->
 
-      <form action="#" method="post" class="space-y-4 text-left md:max-w-2xl md:mx-auto">
+      <form action="#" method="post" class="space-y-4 text-left md:max-w-2xl md:mx-auto lg:max-w-3xl">
         <div class="space-y-2 md:space-y-0 md:flex md:gap-4">
           <!-- First Name -->
           <div class="md:w-1/2">
-            <label for="first-name" class="block text-sm font-semibold text-gray-500">First name</label>
+            <label for="first-name" class="block text-sm font-semibold lg:font-semibold text-gray-500">First
+              name</label>
             <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required
               class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
           </div>
 
           <!-- Last Name -->
           <div class="md:w-1/2">
-            <label for="last-name" class="block text-sm font-semibold text-gray-500">Last name</label>
+            <label for="last-name" class="block text-sm font-semibold lg:font-semibold text-gray-500">Last name</label>
             <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required
               class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
           </div>
         </div>
 
-        <div class="space-y-2 md:space-y-0 md:flex md:gap-4"> 
+        <div class="space-y-2 md:space-y-0 md:flex md:gap-4">
           <!-- Email Address -->
           <div class="md:w-1/2">
-            <label for="email" class="block text-sm font-semibold text-gray-500">Email address</label>
+            <label for="email" class="block text-sm font-semibold lg:font-semibold text-gray-500">Email address</label>
             <input type="email" id="email" name="email" placeholder="Enter your email address" required
               class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
           </div>
 
           <!-- Phone Number -->
           <div class="md:w-1/2">
-            <label for="phone" class="block text-sm font-semibold text-gray-500">Phone number</label>
+            <label for="phone" class="block text-sm font-semibold lg:font-semibold text-gray-500">Phone number</label>
             <div class="flex items-stretch mt-1">
               <span
-                class="inline-flex items-center px-3 rounded-l-md border border-r-0  bg-gray-100 text-gray-500 text-sm">
+                class="inline-flex items-center px-3 rounded-l-md border border-r-0 bg-gray-100 text-gray-500 text-sm">
                 🇮🇳 +91
               </span>
               <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required
@@ -455,15 +522,15 @@
 
         <!-- Message -->
         <div>
-          <label for="message" class="block text-sm font-semibold text-gray-500">Add message</label>
+          <label for="message" class="block text-sm font-semibold lg:font-semibold text-gray-500">Add message</label>
           <textarea id="message" name="message" rows="4" placeholder="Write your query here..."
             class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800"></textarea>
         </div>
 
         <!-- Submit Button -->
-        <div>
+        <div class="lg:mx-auto lg:max-w-max lg:pt-4">
           <button type="submit"
-            class="bg-madrasaPurple font-geist font-semibold text-white py-2.5 self-stretch w-full md:px-3 text-nowrap px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 text-sm">
+            class="bg-violet-700 font-geist font-semibold text-white py-2.5 self-stretch w-full md:px-3 text-nowrap px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 text-sm lg:w-max lg:px-20">
             Submit
           </button>
         </div>
@@ -472,15 +539,15 @@
     </section>
 
 
-    <footer class="px-5 bg-violet-50 py-6 space-y-4 md:flex md:px-12 md:items-center md:justify-between">
+    <footer class="px-5 bg-violet-50 py-6 space-y-4 md:flex md:px-12 md:items-center md:justify-between lg:px-24">
       <img src="/logo-colored.svg" alt="madrasa colored logo" class="mx-auto md:mx-0 py-2">
-      <p class="text-sm text-neutral-500 md:text-base">
+      <p class="text-sm text-neutral-500 md:text-base lg:text-sm">
         Copyright © 2024 Madrasa App<br class="inline md:hidden">
         All Rights Reserved
       </p>
     </footer>
   </div>
-  <script type="module" src="/src/main.ts"></script>
+  <script type="module" src="./src/main.ts"></script>
 </body>
 
 </html>
