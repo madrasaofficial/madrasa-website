@@ -53,7 +53,7 @@ function renderFAQs(category: string) {
   // Create FAQ items
   filteredFAQs.forEach((faq) => {
     const faqItem = document.createElement("div");
-    faqItem.classList.add("faq-item","bg-gray-100","rounded-xl");
+    faqItem.classList.add("faq-item", "bg-gray-100", "rounded-xl");
     faqItem.innerHTML = `
     <div class="p-4 px-5">
         <div class="flex gap-2 items-center justify-between cursor-pointer">
@@ -128,3 +128,52 @@ categoryButtons.forEach((button) => {
 
 // Initial Render (Show All FAQs)
 renderFAQs("All");
+
+
+// State for more features card
+const cards = document.querySelectorAll('.more-feature-card');
+function activateCard(clickedCard: Element) {
+  cards.forEach((card) => {
+    const bg = card.querySelector('.bg-decor');
+    const content = card.querySelector('p.text-sm');
+    if (card === clickedCard) {
+      card.classList.add('![background:linear-gradient(180deg,#FFF_55.77%,#F1F1FF_100%)]', '!shadow-[0px_15px_15.2px_0px_rgba(0,0,147,0.05)]', '!border-[rgba(109,45,211,0.30)]');
+      bg?.classList.add('opacity-90');
+      content?.classList.add('text-neutral-500');
+      setTimeout(() => {
+        card.classList.remove('![background:linear-gradient(180deg,#FFF_55.77%,#F1F1FF_100%)]', '!shadow-[0px_15px_15.2px_0px_rgba(0,0,147,0.05)]', '!border-[rgba(109,45,211,0.30)]');
+        bg?.classList.remove('opacity-90');
+        content?.classList.remove('text-neutral-500')
+      }, 1000);
+
+    } else {
+      card.classList.remove('![background:linear-gradient(180deg,#FFF_55.77%,#F1F1FF_100%)]', '!shadow-[0px_15px_15.2px_0px_rgba(0,0,147,0.05)]', '!border-[rgba(109,45,211,0.30)]');
+      bg?.classList.remove('opacity-90');
+      content?.classList.remove('text-neutral-500')
+    }
+  });
+}
+
+// Add click event listeners to all cards
+cards.forEach((card) => {
+  card.addEventListener('click', () => activateCard(card));
+});
+
+
+
+// Preloader / Loader
+const progressElement = document.getElementById('progress');
+const loaderElement = document.getElementById('loader');
+const bodyElement = document.body;
+
+// Add event listener for the animation end
+if (progressElement && loaderElement) {
+  progressElement.addEventListener('animationend', function () {
+    // Hide the loader
+    loaderElement.style.display = 'none';
+    // Enable scrolling
+    bodyElement.classList.remove('overflow-hidden');
+  });
+} else {
+  console.error('Progress or loader element is missing in the DOM.');
+}

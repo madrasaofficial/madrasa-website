@@ -6,7 +6,7 @@ module.exports = {
       fontFamily: {
         geist: ['Geist', 'sans-serif'],
         poltawsky: ['Poltawsky Nowy', 'serif'],
-        playwrite: ["Playwrite US Modern", "sans-serif"],
+        playwrite: ['Playwrite US Modern', 'sans-serif'],
       },
       colors: {
         madrasaPurple: '#6D2DD3',

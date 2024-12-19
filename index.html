@@ -8,11 +8,30 @@
   <title>Madrasa</title>
 </head>
 
-<body>
+<body class="overflow-hidden scroll-smooth">
+  <div id="loader" class="fixed inset-0 bg-[#21084B] flex justify-center items-center z-[100] select-none"
+    style="height: 100svh;">
+    <div class="w-full space-y-8 mx-auto">
+      <svg width="48" height="48" viewBox="0 0 34 26" fill="none" xmlns="http://www.w3.org/2000/svg"
+        class="fill-neutral-50 w-full">
+        <path
+          d="M0.798758 13.5435L0 10.6484C1.82512 10.309 4.84837 8.32455 5.24775 6.45174C5.68578 4.40712 4.29869 2.91231 3.9852 1.06527L6.7422 0C10.9164 5.62702 7.4293 12.6329 0.794463 13.5435H0.798758Z" />
+        <path
+          d="M20.2862 8.56627C21.0635 9.43824 22.9058 9.43394 23.6358 8.47177C24.8211 6.90823 25.053 4.99247 26.8781 3.72961C30.7688 1.03208 35.2951 5.85155 33.6546 9.97517C32.3577 13.2268 28.4713 12.7543 25.8904 11.3368C23.7045 12.793 20.8874 13.0851 18.7531 11.3712C16.6832 12.7973 14.2912 12.866 11.8949 12.3033C11.4312 12.1959 9.76063 11.8007 9.8637 11.208L10.9072 8.64359C12.2729 9.23206 16.928 9.96228 16.3783 7.56973C16.0648 6.19948 13.8231 3.23134 13.8188 2.64716C13.8188 2.2348 15.747 0.920398 16.0906 0.911807C16.9537 0.894626 18.6457 4.33097 19.0151 5.18576C19.3844 6.04056 19.7408 7.96061 20.2862 8.57056V8.56627ZM28.6259 6.27251C26.2425 8.635 27.8314 9.51986 30.6013 9.05165C31.413 8.51902 30.4253 6.57748 29.6093 6.28539L28.6259 6.27251Z" />
+        <path
+          d="M32.0097 14.1055C33.0232 17.632 34.7753 23.07 30.1546 24.6207C28.5828 25.149 25.3921 25.338 24.8252 23.418H24.4301C24.1853 23.5254 24.1338 23.9678 23.9491 24.131C22.4891 25.4368 18.2591 25.3552 17.2456 23.418C15.6395 25.2306 12.1739 25.4068 10.0439 24.4961C9.21078 24.1396 8.2746 22.9712 7.84087 22.1723C7.08076 20.772 6.94764 18.1002 4.50842 19.4576C2.55017 20.5486 3.38329 22.2067 3.80843 23.9463C2.88084 23.8862 1.21462 25.1576 0.66064 24.0365C-1.67981 19.2944 2.58882 15.218 7.34272 16.0255C10.6966 16.5925 9.60157 20.9825 11.9764 21.5022C15.5235 22.2797 15.6781 20.1363 16.0475 17.297L19.2425 17.8339C18.9762 18.5598 18.5812 20.6517 19.0278 21.2402L21.7247 21.5151C23.116 21.107 22.9142 17.2025 23.6528 17.0564L26.427 17.5719C26.3497 18.9249 25.3749 20.7118 26.8693 21.5194C27.8528 21.6139 28.9736 21.747 29.7595 21.0426C30.6312 19.7024 28.4196 15.2438 28.8233 14.9216L32.0054 14.1184L32.0097 14.1055Z" />
+      </svg>
+
+      <div class="max-w-64 w-full bg-neutral-300 h-2 rounded-full overflow-hidden mx-auto">
+        <div id="progress" class="bg-neutral-50 h-full w-0 rounded-full animate-loader"></div>
+      </div>
+    </div>
+  </div>
   <div id="app">
 
     <!-- Top Bar -->
-    <header class="px-4 md:px-8 flex absolute z-10 w-full items-center justify-between top-8 lg:px-24">
+    <header
+      class="px-4 md:px-8 flex absolute z-10 w-full items-center justify-between top-8 md:top-12 md:max-w-2xl lg:px-24">
       <img src="/logo.svg" alt="Madrasa Logo">
       <menu
         class="bg-purple-50 text-purple-800 font-medium font-geist flex items-center gap-1.5 w-max px-3 py-1.5 rounded-3xl tracking-tight md:hidden">
@@ -24,13 +43,23 @@
       </menu>
     </header>
 
-
     <!-- Hero Section -->
     <section
-      class="relative h-svh text-white flex flex-col items-center justify-end py-8 lg:justify-center lg:items-baseline lg:text-left lg:px-24">
+      class="relative h-svh text-white flex flex-col items-center justify-end py-8 md:pb-16 lg:justify-center lg:items-baseline lg:text-left lg:px-24">
       <!-- Background -->
       <div class="absolute inset-0 w-full h-full hero-bg">
       </div>
+
+      <!--  contact FAB -->
+      <!-- <a href="#contact"
+        class="flex w-[54px] h-[54px] justify-center items-center shrink-0 [background:#2C184E] p-3 rounded-[34px] border-2 border-solid border-white fixed bottom-36 right-8 z-50">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15.4688 2.8125C12.3618 2.81591 9.38306 4.05166 7.18611 6.24861C4.98916 8.44556 3.75341 11.4243 3.75 14.5312V24.375C3.75 24.8723 3.94754 25.3492 4.29917 25.7008C4.65081 26.0525 5.12772 26.25 5.625 26.25H15.4688C18.5768 26.25 21.5575 25.0154 23.7552 22.8177C25.9529 20.62 27.1875 17.6393 27.1875 14.5312C27.1875 11.4232 25.9529 8.44253 23.7552 6.24484C21.5575 4.04715 18.5768 2.8125 15.4688 2.8125ZM10.3125 16.4062C10.0344 16.4062 9.76249 16.3238 9.53123 16.1693C9.29997 16.0147 9.11973 15.7951 9.01329 15.5381C8.90686 15.2812 8.87901 14.9984 8.93327 14.7257C8.98753 14.4529 9.12146 14.2023 9.31813 14.0056C9.5148 13.809 9.76537 13.675 10.0382 13.6208C10.3109 13.5665 10.5937 13.5944 10.8506 13.7008C11.1076 13.8072 11.3272 13.9875 11.4818 14.2187C11.6363 14.45 11.7188 14.7219 11.7188 15C11.7188 15.373 11.5706 15.7306 11.3069 15.9944C11.0431 16.2581 10.6855 16.4062 10.3125 16.4062ZM15.4688 16.4062C15.1906 16.4062 14.9187 16.3238 14.6875 16.1693C14.4562 16.0147 14.276 15.7951 14.1695 15.5381C14.0631 15.2812 14.0353 14.9984 14.0895 14.7257C14.1438 14.4529 14.2777 14.2023 14.4744 14.0056C14.671 13.809 14.9216 13.675 15.1944 13.6208C15.4672 13.5665 15.7499 13.5944 16.0069 13.7008C16.2639 13.8072 16.4835 13.9875 16.638 14.2187C16.7925 14.45 16.875 14.7219 16.875 15C16.875 15.373 16.7268 15.7306 16.4631 15.9944C16.1994 16.2581 15.8417 16.4062 15.4688 16.4062ZM20.625 16.4062C20.3469 16.4062 20.075 16.3238 19.8437 16.1693C19.6125 16.0147 19.4322 15.7951 19.3258 15.5381C19.2194 15.2812 19.1915 14.9984 19.2458 14.7257C19.3 14.4529 19.434 14.2023 19.6306 14.0056C19.8273 13.809 20.0779 13.675 20.3507 13.6208C20.6234 13.5665 20.9062 13.5944 21.1631 13.7008C21.4201 13.8072 21.6397 13.9875 21.7943 14.2187C21.9488 14.45 22.0312 14.7219 22.0312 15C22.0312 15.373 21.8831 15.7306 21.6194 15.9944C21.3556 16.2581 20.998 16.4062 20.625 16.4062Z"
+            fill="white" />
+        </svg>
+      </a> -->
+
 
       <!-- Content -->
       <div class="px-6 z-10 space-y-1.5 lg:space-y-2 md:max-w-xl md:px-0">
@@ -48,11 +77,11 @@
       <div
         class="z-10 pt-8 px-4 md:px-8 w-full space-y-3 md:flex md:gap-3 md:space-y-0 md:max-w-xl md:justify-center lg:px-0 lg:justify-start">
         <button
-          class="bg-madrasaPurple font-geist font-semibold text-white py-2.5 self-stretch w-full md:px-3 text-nowrap px-4 lg:w-max lg:px-6">
+          class="bg-madrasaPurple font-geist font-semibold text-white py-3 self-stretch w-full md:px-3 text-nowrap px-4 lg:w-max lg:px-6 shadow-sm focus:outline-none focus:ring-1 focus:ring-violet-500 focus:ring-offset-1">
           Join Madrasa community
         </button>
         <button
-          class="bg-white font-geist font-semibold text-madrasaPurple py-2.5 self-stretch w-full md:px-3 text-nowrap px-4 lg:w-max lg:px-6">
+          class="bg-white font-geist font-semibold text-madrasaPurple py-3 self-stretch w-full md:px-3 text-nowrap px-4 lg:w-max lg:px-6 shadow-sm focus:outline-none focus:ring-1 focus:ring-violet-500 focus:ring-offset-1">
           Contact Us
         </button>
       </div>
@@ -91,7 +120,7 @@
     <!-- Features -->
     <section id="features" class="px-4 md:px-8 py-16 pt-20 relative bg-neutral-50">
       <!-- Content -->
-      <div class="space-y-4 md:space-y-8 md:max-w-xl md:mx-auto lg:max-w-full lg:px-20">
+      <div class="space-y-4 md:space-y-8 md:max-w-2xl md:mx-auto lg:max-w-full lg:px-20">
 
         <div class="px-8 space-y-2 z-10 text-neutral-50 pb-12 md:space-y-4 lg:max-w-2xl lg:mx-auto">
           <h3 class="font-playwrite md:text-lg text-madrasaPurple">Features</h3>
@@ -109,10 +138,10 @@
         <div class="space-y-8 mx-auto lg:grid lg:grid-cols-2 lg:gap-6 lg:space-y-0">
 
           <div
-            class="bg-amber-50 space-y-2 p-4 pb-8 rounded-xl border border-gray-200 md:pb-10 lg:flex lg:flex-col lg:justify-evenly">
+            class="bg-amber-50 space-y-2 p-4 pb-10 rounded-xl border border-gray-200  md:pb-12 lg:flex lg:flex-col lg:justify-evenly">
             <img src="./src/images/online-learning-img-mobile.png" alt="online learning in Madrasa"
               class="mx-auto lg:max-w-sm">
-            <div class="lg:max-w-lg lg:mx-auto">
+            <div class="lg:max-w-lg lg:mx-auto space-y-1.5 pb-5">
               <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Online learning</h3>
               <p class="font-geist text-neutral-500 px-2 md:text-lg">
                 Madrasa App connects you with tutors for the Quran, Islamic studies, and languages. Learn online or
@@ -122,13 +151,19 @@
                 convenience. Empower your faith and education effortlessly.
               </p>
             </div>
+            <button class="rounded-full mx-auto bg-indigo-950 px-8 md:px-8 py-3 items-center justify-center md:hidden">
+              <p class="font-geist font-semibold text-neutral-50 text-center">
+                Join as a teacher
+              </p>
+            </button>
           </div>
+
           <div
-            class="bg-red-50 space-y-2 p-4 pb-8 rounded-xl border border-gray-200 md:pb-10 lg:flex lg:flex-col lg:justify-evenly">
+            class="bg-red-50 space-y-2 p-4 pb-10 rounded-xl border border-gray-200  md:pb-12 lg:flex lg:flex-col lg:justify-evenly">
             <img src="./src/images/Online-consult-mobile.png" alt="online consultation in Madrasa"
               class="mx-auto lg:max-w-md">
             <div>
-              <div class="lg:max-w-lg lg:mx-auto">
+              <div class="lg:max-w-lg lg:mx-auto space-y-1.5 pb-5">
                 <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Online consultation</h3>
                 <p class="font-geist text-neutral-500 px-2 md:text-lg">
                   Facing relationship or parenting challenges? Doubts, stress, or questions about life and faith?
@@ -138,17 +173,23 @@
                   Islamic scholars online for guidance, clarity, and peace.
                 </p>
               </div>
+              <button
+                class="rounded-full mx-auto bg-indigo-950 px-8 md:px-8 py-3 items-center justify-center md:hidden">
+                <p class="font-geist font-semibold text-neutral-50 text-center">
+                  Join as a scholar
+                </p>
+              </button>
             </div>
           </div>
 
           <div
-            class="bg-sky-50 space-y-2 p-4 pb-8 rounded-xl border border-gray-200 md:pb-10 lg:flex lg:flex-col lg:justify-evenly">
+            class="bg-sky-50 space-y-2 p-4 pb-10 rounded-xl border border-gray-200  md:pb-12 lg:flex lg:flex-col lg:justify-evenly">
             <div class="w-full overflow-x-auto whitespace-nowrap no-scrollbar">
               <img src="./src/images/Islamic-events-mobile.png" alt="online learning in Madrasa"
                 class="inline-block max-h-72 w-auto max-w-none">
             </div>
 
-            <div class="lg:max-w-lg lg:mx-auto">
+            <div class="lg:max-w-lg lg:mx-auto space-y-1.5 pb-5">
               <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Islamic Events</h3>
               <p class="font-geist text-neutral-500 px-2 md:text-lg">
                 Madrasa App connects you with tutors for the Quran, Islamic studies, and languages. Learn online or
@@ -158,25 +199,37 @@
                 convenience. Empower your faith and education effortlessly.
               </p>
             </div>
+            <button class="rounded-full mx-auto bg-indigo-950 px-8 md:px-8 py-3 items-center justify-center md:hidden">
+              <p class="font-geist font-semibold text-neutral-50 text-center">
+                Join Madrasa community
+              </p>
+            </button>
+
           </div>
 
           <div
-            class="bg-violet-50 space-y-2 p-4 px-0 pb-8 rounded-xl border border-gray-200 md:pb-10 lg:flex lg:flex-col lg:justify-evenly">
+            class="bg-violet-50 space-y-2 p-4 px-0 pb-10 rounded-xl border border-gray-200  md:pb-12 lg:flex lg:flex-col lg:justify-evenly">
             <div class="relative w-full h-60 overflow-hidden">
               <img src="./src/images/Prayer-tools-mobile.png" alt="online learning in Madrasa"
                 class="absolute inset-0 h-full w-full object-cover object-center" />
             </div>
-
-            <div class="lg:max-w-lg lg:mx-auto">
+            <div class="lg:max-w-lg lg:mx-auto space-y-1.5 pb-5">
               <h3 class="font-poltawsky capitalize font-bold text-2xl text-neutral-800">Prayer tools</h3>
-              <p class="font-geist text-neutral-500 px-2 md:text-lg">
+              <p class="font-geist text-neutral-500 px-2 md:text-lg ">
                 Madrasa App offers tools like the Digital Quran, Namaz Alerts, Dua Collection, and Zakat Calculator.
                 Stay
                 connected to
                 your faith effortlessly and strengthen your Imaan daily.
               </p>
             </div>
+            <button class="rounded-full mx-auto bg-indigo-950 px-8 md:px-8 py-3 items-center justify-center md:hidden">
+              <p class="font-geist font-semibold text-neutral-50 text-center">
+                Join Madrasa community
+              </p>
+            </button>
+
           </div>
+
         </div>
       </div>
 
@@ -191,7 +244,8 @@
         </h1>
 
         <!-- Testimonial cards -->
-        <div class="space-y-4 md:grid md:grid-cols-2 md:gap-4 md:space-y-0 lg:max-w-7xl lg:grid-cols-3 lg:mx-auto">
+        <div
+          class="space-y-4 md:grid md: md:grid-cols-2 md:max-w-2xl md:mx-auto md:gap-4 md:space-y-0 lg:max-w-7xl lg:grid-cols-3 lg:mx-auto">
           <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border"
             style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
             <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
@@ -289,7 +343,7 @@
         <div class="pt-2 md:hidden" aria-hidden="true"></div>
 
         <button
-          class="flex gap-1.5 rounded-full mx-auto bg-violet-100 px-4 md:px-8 py-2.5 items-center justify-center md:hidden ">
+          class="flex gap-1.5 rounded-full mx-auto bg-violet-100 px-4 md:px-8 py-3 items-center justify-center md:hidden ">
           <p class="font-geist font-semibold text-violet-700 text-center">
             Load More Content
           </p>
@@ -305,109 +359,159 @@
 
     <!-- More features Section -->
     <section id="more features" class="px-4 md:px-8 py-16 pt-20 relative bg-neutral-50">
-      <div class="space-y-4 md:space-y-6 md:max-w-xl md:mx-auto lg:max-w-7xl lg:px-20">
-
+      <div class="space-y-4 md:space-y-6 md:max-w-2xl md:mx-auto lg:max-w-7xl lg:px-20">
         <h3 class="font-playwrite md:text-lg text-madrasaPurple">More Features</h3>
-
         <h1 class="font-poltawsky md:text-4xl font-bold text-3xl text-neutral-800 px-8">
-          We still have much more<br class="hidden lg:inline"> for ummah
+          We still have much<br class="hidden md:inline lg:hidden"> more<br class="hidden lg:inline"> for ummah
         </h1>
+        <p class="text-neutral-600 px-4 pb-6 md:max-w-xl md:mx-auto md:px-2 lg:px-0">Madrasa is a comprehensive mobile
+          app designed to serve the diverse needs
+          of the Muslim community—offering everything
+          from education and worship tools to lifestyle and travel solutions, all in one seamless platform.</p>
 
         <!-- More Feature Cards -->
-        <div class="space-y-14 lg:space-y-0 more-features-container">
-
-          <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center text-left lg:gap-10">
-            <div class="bg-violet-200 lg:bg-violet-100 pt-14 rounded-2xl my-6 md:mb-14 md:mt-8 lg:px-14">
-              <img src="./src/images/iPhone Mockup.png" alt="mockup for Madrasa" class=" max-w-72 mx-auto lg:max-w-64">
-            </div>
-            <!-- Card Content -->
-            <div class="px-2 lg:max-w-lg">
-              <h3 class="font-playwrite lg:text-base md:text-lg text-madrasaPurple txt-sm mb-1">Maktab - Find your Ustad
-              </h3>
-              <p
-                class="font-poltawsky font-bold text-2xl text-neutral-900 leading-tight px-8 mb-2 md:my-2 md:px-10 lg:px-0">
-                Be a part of us to
-                build for <br class="hidden md:inline"> muslim community
-              </p>
-              <p class="font-geist text-neutral-500 px-6 lg:text-base md:text-lg lg:px-0 lg:max-w-md">
-                Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim
-                community—offering
-                everything
-                from education and worship tools to lifestyle and travel solutions, all in one seamless platform.
-              </p>
-            </div>
-          </div>
-
-          <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center text-left lg:gap-10">
-            <div class="bg-violet-200 lg:bg-violet-100 pt-14 rounded-2xl my-6 md:mb-14 md:mt-8 lg:px-14">
-              <img src="./src/images/iPhone Mockup.png" alt="mockup for Madrasa" class=" max-w-72 mx-auto lg:max-w-64">
-            </div>
-            <!-- Card Content -->
-            <div class="px-2 lg:max-w-lg">
-              <h3 class="font-playwrite lg:text-base md:text-lg text-madrasaPurple txt-sm mb-1">Maktab - Find your Ustad
-              </h3>
-              <p
-                class="font-poltawsky font-bold text-2xl text-neutral-900 leading-tight px-8 mb-2 md:my-2 md:px-10 lg:px-0">
-                Be a part of us to
-                build for <br class="hidden md:inline"> muslim community
-              </p>
-              <p class="font-geist text-neutral-500 px-6 lg:text-base md:text-lg lg:px-0 lg:max-w-md">
-                Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim
-                community—offering
-                everything
-                from education and worship tools to lifestyle and travel solutions, all in one seamless platform.
-              </p>
+        <div class="space-y-4 md:grid md:grid-cols-2 md:gap-3 md:gap-x-4 md:space-y-0 lg:grid-cols-3 lg:gap-4 lg:py-2">
+          <div
+            class="more-feature-card group select-none lg:space-y-0 max-w-[345px] cursor-pointer mx-auto transition duration-500 ease-in-out text-left border border-transparent rounded-[20px] hover:[background:linear-gradient(180deg,#FFF_55.77%,#F1F1FF_100%)] hover:shadow-[0px_15px_15.2px_0px_rgba(0,0,147,0.05)] hover:border-[rgba(109,45,211,0.30)] relative">
+            <img src="/testimonial-card-decor.svg" alt="more feature card decor" aria-hidden="true"
+              class="bg-decor absolute -scale-y-100 bottom-0 opacity-0  transition-opacity duration-700 ease-in-out group-hover:opacity-90">
+            <div class="px-4 py-6 space-y-2 z-20 relative">
+              <div class="pb-3 pt-1">
+                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="fill-black group-hover:fill-violet-500 transition-colors duration-500 ease-in">
+                  <path
+                    d="M30.875 5.625H6.125C5.52826 5.625 4.95597 5.86205 4.53401 6.28401C4.11205 6.70597 3.875 7.27826 3.875 7.875V30.375C3.8751 30.5667 3.92421 30.7553 4.01766 30.9227C4.11112 31.0901 4.24581 31.2309 4.40896 31.3316C4.57211 31.4324 4.7583 31.4897 4.94985 31.4983C5.14141 31.5068 5.33196 31.4663 5.50344 31.3805L9.5 29.3822L13.4966 31.3805C13.6529 31.4587 13.8252 31.4994 14 31.4994C14.1748 31.4994 14.3471 31.4587 14.5034 31.3805L18.5 29.3822L22.4966 31.3805C22.6529 31.4587 22.8252 31.4994 23 31.4994C23.1748 31.4994 23.3471 31.4587 23.5034 31.3805L27.5 29.3822L31.4966 31.3805C31.668 31.4663 31.8586 31.5068 32.0501 31.4983C32.2417 31.4897 32.4279 31.4324 32.591 31.3316C32.7542 31.2309 32.8889 31.0901 32.9823 30.9227C33.0758 30.7553 33.1249 30.5667 33.125 30.375V7.875C33.125 7.27826 32.8879 6.70597 32.466 6.28401C32.044 5.86205 31.4717 5.625 30.875 5.625ZM16.8125 22.5C16.8125 22.6492 16.7532 22.7923 16.6477 22.8977C16.5423 23.0032 16.3992 23.0625 16.25 23.0625H9.5C9.35082 23.0625 9.20774 23.0032 9.10225 22.8977C8.99676 22.7923 8.9375 22.6492 8.9375 22.5V13.5C8.9375 13.3508 8.99676 13.2077 9.10225 13.1023C9.20774 12.9968 9.35082 12.9375 9.5 12.9375H16.25C16.3992 12.9375 16.5423 12.9968 16.6477 13.1023C16.7532 13.2077 16.8125 13.3508 16.8125 13.5V22.5ZM27.5 21.375H20.75C20.4516 21.375 20.1655 21.2565 19.9545 21.0455C19.7435 20.8345 19.625 20.5484 19.625 20.25C19.625 19.9516 19.7435 19.6655 19.9545 19.4545C20.1655 19.2435 20.4516 19.125 20.75 19.125H27.5C27.7984 19.125 28.0845 19.2435 28.2955 19.4545C28.5065 19.6655 28.625 19.9516 28.625 20.25C28.625 20.5484 28.5065 20.8345 28.2955 21.0455C28.0845 21.2565 27.7984 21.375 27.5 21.375ZM27.5 16.875H20.75C20.4516 16.875 20.1655 16.7565 19.9545 16.5455C19.7435 16.3345 19.625 16.0484 19.625 15.75C19.625 15.4516 19.7435 15.1655 19.9545 14.9545C20.1655 14.7435 20.4516 14.625 20.75 14.625H27.5C27.7984 14.625 28.0845 14.7435 28.2955 14.9545C28.5065 15.1655 28.625 15.4516 28.625 15.75C28.625 16.0484 28.5065 16.3345 28.2955 16.5455C28.0845 16.7565 27.7984 16.875 27.5 16.875Z" />
+                </svg>
+              </div>
+              <h4 class="font-geist text-neutral-800 font-semibold">Islamic News</h4>
+              <p class="text-neutral-400 group-hover:text-neutral-500 transition-colors duration-500 text-sm pr-1">
+                Madrasa is a comprehensive mobile app designed to serve the
+                diverse
+                needs of the
+                Muslim community—offering everything
+                from education</p>
             </div>
           </div>
 
-          <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center text-left lg:gap-10">
-            <div class="bg-violet-200 lg:bg-violet-100 pt-14 rounded-2xl my-6 md:mb-14 md:mt-8 lg:px-14">
-              <img src="./src/images/iPhone Mockup.png" alt="mockup for Madrasa" class=" max-w-72 mx-auto lg:max-w-64">
-            </div>
-            <!-- Card Content -->
-            <div class="px-2 lg:max-w-lg">
-              <h3 class="font-playwrite lg:text-base md:text-lg text-madrasaPurple txt-sm mb-1">Maktab - Find your Ustad
-              </h3>
-              <p
-                class="font-poltawsky font-bold text-2xl text-neutral-900 leading-tight px-8 mb-2 md:my-2 md:px-10 lg:px-0">
-                Be a part of us to
-                build for <br class="hidden md:inline"> muslim community
-              </p>
-              <p class="font-geist text-neutral-500 px-6 lg:text-base md:text-lg lg:px-0 lg:max-w-md">
-                Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim
-                community—offering
-                everything
-                from education and worship tools to lifestyle and travel solutions, all in one seamless platform.
-              </p>
-            </div>
-          </div>
-
-          <div class="lg:flex lg:flex-row-reverse lg:items-center lg:justify-center text-left lg:gap-10">
-            <div class="bg-violet-200 lg:bg-violet-100 pt-14 rounded-2xl my-6 md:mb-14 md:mt-8 lg:px-14">
-              <img src="./src/images/iPhone Mockup.png" alt="mockup for Madrasa" class=" max-w-72 mx-auto lg:max-w-64">
-            </div>
-            <!-- Card Content -->
-            <div class="px-2 lg:max-w-lg">
-              <h3 class="font-playwrite lg:text-base md:text-lg text-madrasaPurple txt-sm mb-1">Maktab - Find your Ustad
-              </h3>
-              <p
-                class="font-poltawsky font-bold text-2xl text-neutral-900 leading-tight px-8 mb-2 md:my-2 md:px-10 lg:px-0">
-                Be a part of us to
-                build for <br class="hidden md:inline"> muslim community
-              </p>
-              <p class="font-geist text-neutral-500 px-6 lg:text-base md:text-lg lg:px-0 lg:max-w-md">
-                Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim
-                community—offering
-                everything
-                from education and worship tools to lifestyle and travel solutions, all in one seamless platform.
-              </p>
+          <div
+            class="more-feature-card group select-none lg:space-y-0 max-w-[345px] cursor-pointer mx-auto transition duration-500 ease-in-out text-left border border-transparent rounded-[20px] hover:[background:linear-gradient(180deg,#FFF_55.77%,#F1F1FF_100%)] hover:shadow-[0px_15px_15.2px_0px_rgba(0,0,147,0.05)] hover:border-[rgba(109,45,211,0.30)] relative">
+            <img src="/testimonial-card-decor.svg" alt="more feature card decor" aria-hidden="true"
+              class="bg-decor absolute -scale-y-100 bottom-0 opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-90">
+            <div class="px-4 py-6 space-y-2 z-20 relative">
+              <div class="pb-3 pt-1">
+                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="fill-black group-hover:fill-violet-500 transition-colors duration-500 ease-in">
+                  <path
+                    d="M32.2616 14.4591C31.7314 13.905 31.183 13.3341 30.9762 12.832C30.785 12.3722 30.7738 11.61 30.7625 10.8717C30.7414 9.49922 30.7189 7.94391 29.6375 6.8625C28.5561 5.78109 27.0008 5.75859 25.6283 5.7375C24.89 5.72625 24.1278 5.715 23.668 5.52375C23.1673 5.31703 22.595 4.76859 22.0409 4.23844C21.0706 3.30609 19.9681 2.25 18.5 2.25C17.0319 2.25 15.9308 3.30609 14.9591 4.23844C14.405 4.76859 13.8341 5.31703 13.332 5.52375C12.875 5.715 12.11 5.72625 11.3717 5.7375C9.99922 5.75859 8.44391 5.78109 7.3625 6.8625C6.28109 7.94391 6.26562 9.49922 6.2375 10.8717C6.22625 11.61 6.215 12.3722 6.02375 12.832C5.81703 13.3327 5.26859 13.905 4.73844 14.4591C3.80609 15.4294 2.75 16.5319 2.75 18C2.75 19.4681 3.80609 20.5692 4.73844 21.5409C5.26859 22.095 5.81703 22.6659 6.02375 23.168C6.215 23.6278 6.22625 24.39 6.2375 25.1283C6.25859 26.5008 6.28109 28.0561 7.3625 29.1375C8.44391 30.2189 9.99922 30.2414 11.3717 30.2625C12.11 30.2738 12.8722 30.285 13.332 30.4762C13.8327 30.683 14.405 31.2314 14.9591 31.7616C15.9294 32.6939 17.0319 33.75 18.5 33.75C19.9681 33.75 21.0692 32.6939 22.0409 31.7616C22.595 31.2314 23.1659 30.683 23.668 30.4762C24.1278 30.285 24.89 30.2738 25.6283 30.2625C27.0008 30.2414 28.5561 30.2189 29.6375 29.1375C30.7189 28.0561 30.7414 26.5008 30.7625 25.1283C30.7738 24.39 30.785 23.6278 30.9762 23.168C31.183 22.6673 31.7314 22.095 32.2616 21.5409C33.1939 20.5706 34.25 19.4681 34.25 18C34.25 16.5319 33.1939 15.4308 32.2616 14.4591ZM18.5 27C18.1662 27 17.84 26.901 17.5625 26.7156C17.285 26.5302 17.0687 26.2666 16.941 25.9583C16.8132 25.6499 16.7798 25.3106 16.8449 24.9833C16.91 24.6559 17.0708 24.3553 17.3068 24.1193C17.5428 23.8833 17.8434 23.7225 18.1708 23.6574C18.4981 23.5923 18.8374 23.6257 19.1458 23.7535C19.4541 23.8812 19.7177 24.0975 19.9031 24.375C20.0885 24.6525 20.1875 24.9787 20.1875 25.3125C20.1875 25.7601 20.0097 26.1893 19.6932 26.5057C19.3768 26.8222 18.9476 27 18.5 27ZM19.625 20.1488V20.25C19.625 20.5484 19.5065 20.8345 19.2955 21.0455C19.0845 21.2565 18.7984 21.375 18.5 21.375C18.2016 21.375 17.9155 21.2565 17.7045 21.0455C17.4935 20.8345 17.375 20.5484 17.375 20.25V19.125C17.375 18.8266 17.4935 18.5405 17.7045 18.3295C17.9155 18.1185 18.2016 18 18.5 18C20.3605 18 21.875 16.7344 21.875 15.1875C21.875 13.6406 20.3605 12.375 18.5 12.375C16.6395 12.375 15.125 13.6406 15.125 15.1875V15.75C15.125 16.0484 15.0065 16.3345 14.7955 16.5455C14.5845 16.7565 14.2984 16.875 14 16.875C13.7016 16.875 13.4155 16.7565 13.2045 16.5455C12.9935 16.3345 12.875 16.0484 12.875 15.75V15.1875C12.875 12.3961 15.3978 10.125 18.5 10.125C21.6022 10.125 24.125 12.3961 24.125 15.1875C24.125 17.6316 22.19 19.6777 19.625 20.1488Z" />
+                </svg>
+              </div>
+              <h4 class="font-geist text-neutral-800 font-semibold">Quizzes</h4>
+              <p class="text-neutral-400 group-hover:text-neutral-500 transition-colors duration-500 text-sm pr-1">
+                Madrasa is a comprehensive mobile app designed to serve the
+                diverse
+                needs of the
+                Muslim community—offering everything
+                from education</p>
             </div>
           </div>
 
+          <div
+            class="more-feature-card group select-none lg:space-y-0 max-w-[345px] cursor-pointer mx-auto transition duration-500 ease-in-out text-left border border-transparent rounded-[20px] hover:[background:linear-gradient(180deg,#FFF_55.77%,#F1F1FF_100%)] hover:shadow-[0px_15px_15.2px_0px_rgba(0,0,147,0.05)] hover:border-[rgba(109,45,211,0.30)] relative">
+            <img src="/testimonial-card-decor.svg" alt="more feature card decor" aria-hidden="true"
+              class="bg-decor absolute -scale-y-100 bottom-0 opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-90">
+            <div class="px-4 py-6 space-y-2 z-20 relative">
+              <div class="pb-3 pt-1">
+                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="fill-black group-hover:fill-violet-500 transition-colors duration-500 ease-in">
+                  <path
+                    d="M30.141 5.51941L11.8246 2.28504C11.237 2.18163 10.6324 2.31584 10.1437 2.65813C9.65506 3.00043 9.32236 3.52279 9.21878 4.11035L5.03519 27.876C4.98402 28.1671 4.99072 28.4655 5.05491 28.754C5.11911 29.0426 5.23953 29.3157 5.4093 29.5577C5.57908 29.7997 5.79487 30.0058 6.04436 30.1644C6.29384 30.3229 6.57213 30.4308 6.86331 30.4818L25.1797 33.7161C25.471 33.7675 25.7695 33.761 26.0582 33.6969C26.3469 33.6328 26.6202 33.5124 26.8623 33.3426C27.1045 33.1728 27.3108 32.9569 27.4694 32.7073C27.6281 32.4577 27.7359 32.1793 27.7869 31.888L31.9705 8.12238C32.073 7.5346 31.9378 6.93018 31.5947 6.44205C31.2516 5.95392 30.7287 5.62204 30.141 5.51941ZM19.5547 18.5005C19.5088 18.7608 19.3727 18.9965 19.1704 19.1665C18.968 19.3365 18.7123 19.4298 18.448 19.43C18.382 19.43 18.3162 19.4244 18.2511 19.4132L12.4152 18.3824C12.1378 18.3142 11.8968 18.143 11.741 17.9036C11.5852 17.6642 11.5263 17.3746 11.5762 17.0933C11.6261 16.8121 11.7811 16.5604 12.0098 16.3893C12.2384 16.2181 12.5236 16.1404 12.8075 16.1718L18.6407 17.1969C18.7863 17.2224 18.9255 17.2763 19.0503 17.3557C19.1751 17.435 19.283 17.5381 19.3679 17.6592C19.4528 17.7803 19.513 17.9169 19.5451 18.0613C19.5771 18.2056 19.5804 18.3549 19.5547 18.5005ZM26.1641 15.1002C26.1182 15.3602 25.9824 15.5958 25.7803 15.7657C25.5782 15.9357 25.3228 16.0291 25.0588 16.0297C24.9923 16.0299 24.9259 16.0237 24.8605 16.0114L13.1886 13.9513C12.8947 13.8993 12.6335 13.7326 12.4625 13.488C12.2915 13.2434 12.2246 12.9409 12.2767 12.647C12.3287 12.3531 12.4953 12.0919 12.7399 11.9209C12.9845 11.7499 13.2871 11.683 13.581 11.735L25.2528 13.7966C25.3986 13.8219 25.538 13.8757 25.6629 13.955C25.7879 14.0342 25.896 14.1374 25.981 14.2585C26.0661 14.3796 26.1264 14.5162 26.1585 14.6607C26.1907 14.8051 26.194 14.9545 26.1683 15.1002H26.1641ZM26.9446 10.6677C26.8986 10.9279 26.7626 11.1637 26.5602 11.3337C26.3578 11.5036 26.1021 11.5969 25.8378 11.5972C25.7719 11.5971 25.706 11.5915 25.641 11.5803L13.9691 9.51879C13.8203 9.49688 13.6773 9.44534 13.5487 9.36723C13.4202 9.28911 13.3086 9.186 13.2206 9.06399C13.1325 8.94199 13.0699 8.80357 13.0363 8.65692C13.0027 8.51027 12.9989 8.35838 13.025 8.21023C13.0512 8.06207 13.1068 7.92067 13.1885 7.79438C13.2703 7.66809 13.3766 7.55949 13.501 7.47499C13.6255 7.39049 13.7656 7.33182 13.9132 7.30244C14.0607 7.27306 14.2127 7.27357 14.36 7.30394L26.0319 9.3641C26.1778 9.38925 26.3173 9.44296 26.4424 9.52214C26.5676 9.60133 26.6758 9.70443 26.761 9.82554C26.8462 9.94665 26.9066 10.0834 26.9388 10.2279C26.9711 10.3724 26.9744 10.5219 26.9488 10.6677H26.9446Z" />
+                </svg>
+              </div>
+              <h4 class="font-geist text-neutral-800 font-semibold">Daily dua's</h4>
+              <p class="text-neutral-400 group-hover:text-neutral-500 transition-colors duration-500 text-sm pr-1">
+                Madrasa is a comprehensive mobile app designed to serve the
+                diverse
+                needs of the
+                Muslim community—offering everything
+                from education</p>
+            </div>
+          </div>
 
-          <!-- end of cards -->
+          <div
+            class="more-feature-card group select-none lg:space-y-0 max-w-[345px] cursor-pointer mx-auto transition duration-500 ease-in-out text-left border border-transparent rounded-[20px] hover:[background:linear-gradient(180deg,#FFF_55.77%,#F1F1FF_100%)] hover:shadow-[0px_15px_15.2px_0px_rgba(0,0,147,0.05)] hover:border-[rgba(109,45,211,0.30)] relative">
+            <img src="/testimonial-card-decor.svg" alt="more feature card decor" aria-hidden="true"
+              class="bg-decor absolute -scale-y-100 bottom-0 opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-90">
+            <div class="px-4 py-6 space-y-2 z-20 relative">
+              <div class="pb-3 pt-1">
+                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="fill-black group-hover:fill-violet-500 transition-colors duration-500 ease-in">
+                  <path
+                    d="M33.8591 21.361V21.3469C33.8566 21.3364 33.8533 21.326 33.8492 21.316C33.7559 21.0613 33.6474 20.8124 33.5244 20.5707L27.6786 7.28444C27.6223 7.15646 27.5427 7.0401 27.4437 6.94131C27.0259 6.52334 26.5297 6.19178 25.9837 5.96557C25.4377 5.73936 24.8524 5.62293 24.2614 5.62293C23.6704 5.62293 23.0851 5.73936 22.5391 5.96557C21.9931 6.19178 21.4969 6.52334 21.0791 6.94131C20.8688 7.15178 20.7505 7.43695 20.75 7.73444V11.2501H16.25V7.73444C16.2501 7.58666 16.2211 7.4403 16.1646 7.30373C16.1082 7.16716 16.0254 7.04306 15.9209 6.9385C15.5031 6.52053 15.0069 6.18897 14.4609 5.96276C13.9149 5.73655 13.3296 5.62012 12.7386 5.62012C12.1476 5.62012 11.5623 5.73655 11.0163 5.96276C10.4702 6.18897 9.97412 6.52053 9.55625 6.9385C9.45732 7.03729 9.37768 7.15365 9.3214 7.28163L3.48125 20.5707C3.35823 20.8124 3.24975 21.0613 3.1564 21.316C3.15249 21.3256 3.1492 21.3355 3.14656 21.3455C3.14656 21.3455 3.14656 21.3568 3.14656 21.361C2.56576 23.0392 2.66967 24.8786 3.43577 26.4806C4.20186 28.0827 5.56843 29.3183 7.2393 29.9198C8.91017 30.5212 10.7507 30.4399 12.3621 29.6936C13.9735 28.9473 15.2259 27.5961 15.8478 25.9327C16.1217 25.1856 16.2598 24.3955 16.2556 23.5998V13.5001H20.7556V23.6012C20.7515 24.3969 20.8896 25.187 21.1634 25.9341C21.7854 27.5975 23.0377 28.9487 24.6491 29.695C26.2605 30.4413 28.1011 30.5226 29.7719 29.9212C31.4428 29.3197 32.8094 28.0841 33.5755 26.482C34.3416 24.88 34.4455 23.0406 33.8647 21.3624L33.8591 21.361ZM13.7286 25.1579C13.3132 26.2663 12.4777 27.1665 11.4032 27.6632C10.3287 28.16 9.10176 28.2134 7.98819 27.8118C6.87463 27.4102 5.96415 26.586 5.45405 25.5178C4.94394 24.4496 4.87528 23.2234 5.26296 22.1049L5.5175 21.5241C5.98532 20.6349 6.7373 19.9278 7.65362 19.5155C8.56995 19.1032 9.5979 19.0095 10.5737 19.2492C11.5495 19.489 12.4169 20.0484 13.0379 20.8384C13.6588 21.6283 13.9975 22.6034 14 23.6082V23.6251C13.9999 24.1498 13.9081 24.6704 13.7286 25.1635V25.1579ZM29.0469 27.8537C28.3666 28.1027 27.6364 28.1838 26.9181 28.0901C26.1998 27.9964 25.5148 27.7308 24.9211 27.3156C24.3275 26.9005 23.8429 26.3482 23.5084 25.7057C23.174 25.0632 22.9995 24.3494 23 23.6251V23.6096C23.0037 22.6053 23.3433 21.6311 23.9647 20.842C24.5861 20.053 25.4536 19.4946 26.429 19.2555C27.4045 19.0165 28.4319 19.1107 29.3476 19.5231C30.2634 19.9355 31.0149 20.6423 31.4825 21.5312L31.737 22.1119C32.1372 23.2303 32.0789 24.4615 31.575 25.5371C31.071 26.6127 30.1623 27.4454 29.0469 27.8537Z" />
+                </svg>
+              </div>
+              <h4 class="font-geist text-neutral-800 font-semibold">Semantic search</h4>
+              <p class="text-neutral-400 group-hover:text-neutral-500 transition-colors duration-500 text-sm pr-1">
+                Madrasa is a comprehensive mobile app designed to serve the
+                diverse
+                needs of the
+                Muslim community—offering everything
+                from education</p>
+            </div>
+          </div>
+
+          <div
+            class="more-feature-card group select-none lg:space-y-0 max-w-[345px] cursor-pointer mx-auto transition duration-500 ease-in-out text-left border border-transparent rounded-[20px] hover:[background:linear-gradient(180deg,#FFF_55.77%,#F1F1FF_100%)] hover:shadow-[0px_15px_15.2px_0px_rgba(0,0,147,0.05)] hover:border-[rgba(109,45,211,0.30)] relative">
+            <img src="/testimonial-card-decor.svg" alt="more feature card decor" aria-hidden="true"
+              class="bg-decor absolute -scale-y-100 bottom-0 opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-90">
+            <div class="px-4 py-6 space-y-2 z-20 relative">
+              <div class="pb-3 pt-1">
+                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="fill-black group-hover:fill-violet-500 transition-colors duration-500 ease-in">
+                  <path
+                    d="M24.125 31.5C24.125 31.7984 24.0065 32.0845 23.7955 32.2955C23.5845 32.5065 23.2984 32.625 23 32.625H14C13.7016 32.625 13.4155 32.5065 13.2045 32.2955C12.9935 32.0845 12.875 31.7984 12.875 31.5C12.875 31.2016 12.9935 30.9155 13.2045 30.7045C13.4155 30.4935 13.7016 30.375 14 30.375H23C23.2984 30.375 23.5845 30.4935 23.7955 30.7045C24.0065 30.9155 24.125 31.2016 24.125 31.5ZM31.6977 27C31.5025 27.3439 31.2191 27.6294 30.8767 27.8272C30.5343 28.0249 30.1454 28.1277 29.75 28.125H7.25002C6.85449 28.1245 6.46609 28.0197 6.12397 27.8212C5.78185 27.6227 5.49809 27.3376 5.3013 26.9945C5.10452 26.6514 5.00165 26.2625 5.00307 25.8669C5.00449 25.4714 5.11014 25.0832 5.30939 24.7416C6.08986 23.3972 7.25002 19.5947 7.25002 14.625C7.25002 11.6413 8.43528 8.77983 10.5451 6.67005C12.6548 4.56026 15.5163 3.375 18.5 3.375C21.4837 3.375 24.3452 4.56026 26.455 6.67005C28.5648 8.77983 29.75 11.6413 29.75 14.625C29.75 19.5933 30.9116 23.3972 31.692 24.7416C31.8933 25.0837 31.9997 25.4733 32.0005 25.8702C32.0012 26.2671 31.8962 26.6571 31.6963 27H31.6977ZM21.875 20.25C21.875 19.9516 21.7565 19.6655 21.5455 19.4545C21.3345 19.2435 21.0484 19.125 20.75 19.125H18.3594L21.6922 14.1244C21.8055 13.9545 21.8705 13.757 21.8801 13.553C21.8898 13.3491 21.8437 13.1463 21.7469 12.9665C21.65 12.7867 21.5061 12.6367 21.3305 12.5325C21.1549 12.4283 20.9542 12.3738 20.75 12.375H16.25C15.9516 12.375 15.6655 12.4935 15.4545 12.7045C15.2435 12.9155 15.125 13.2016 15.125 13.5C15.125 13.7984 15.2435 14.0845 15.4545 14.2955C15.6655 14.5065 15.9516 14.625 16.25 14.625H18.6477L15.3149 19.6256C15.2019 19.795 15.1369 19.9918 15.127 20.1952C15.1171 20.3986 15.1626 20.6008 15.2586 20.7804C15.3545 20.9599 15.4975 21.1101 15.6721 21.2148C15.8467 21.3195 16.0464 21.3749 16.25 21.375H20.75C21.0484 21.375 21.3345 21.2565 21.5455 21.0455C21.7565 20.8345 21.875 20.5484 21.875 20.25Z" />
+                </svg>
+              </div>
+              <h4 class="font-geist text-neutral-800 font-semibold">Notifications</h4>
+              <p class="text-neutral-400 group-hover:text-neutral-500 transition-colors duration-500 text-sm pr-1">
+                Madrasa is a comprehensive mobile app designed to serve the
+                diverse
+                needs of the
+                Muslim community—offering everything
+                from education</p>
+            </div>
+          </div>
+
+          <div
+            class="more-feature-card group select-none lg:space-y-0 max-w-[345px] cursor-pointer mx-auto transition duration-500 ease-in-out text-left border border-transparent rounded-[20px] hover:[background:linear-gradient(180deg,#FFF_55.77%,#F1F1FF_100%)] hover:shadow-[0px_15px_15.2px_0px_rgba(0,0,147,0.05)] hover:border-[rgba(109,45,211,0.30)] relative">
+            <img src="/testimonial-card-decor.svg" alt="more feature card decor" aria-hidden="true"
+              class="bg-decor absolute -scale-y-100 bottom-0 opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-90">
+            <div class="px-4 py-6 space-y-2 z-20 relative">
+              <div class="pb-3 pt-1">
+                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="fill-black group-hover:fill-violet-500 transition-colors duration-500 ease-in">
+                  <path
+                    d="M12.0791 9.79585C11.9745 9.69136 11.8915 9.56729 11.8349 9.43072C11.7783 9.29414 11.7491 9.14775 11.7491 8.99991C11.7491 8.85207 11.7783 8.70567 11.8349 8.5691C11.8915 8.43253 11.9745 8.30845 12.0791 8.20397L17.7041 2.57897C17.8086 2.47437 17.9326 2.39139 18.0692 2.33478C18.2058 2.27816 18.3522 2.24902 18.5 2.24902C18.6479 2.24902 18.7943 2.27816 18.9308 2.33478C19.0674 2.39139 19.1915 2.47437 19.296 2.57897L24.921 8.20397C25.0256 8.30845 25.1085 8.43253 25.1652 8.5691C25.2218 8.70567 25.2509 8.85207 25.2509 8.99991C25.2509 9.14775 25.2218 9.29414 25.1652 9.43072C25.1085 9.56729 25.0256 9.69136 24.921 9.79585L19.296 15.4208C19.1915 15.5254 19.0674 15.6084 18.9308 15.665C18.7943 15.7217 18.6479 15.7508 18.5 15.7508C18.3522 15.7508 18.2058 15.7217 18.0692 15.665C17.9326 15.6084 17.8086 15.5254 17.7041 15.4208L12.0791 9.79585ZM19.296 20.579C19.1915 20.4744 19.0674 20.3914 18.9308 20.3348C18.7943 20.2782 18.6479 20.249 18.5 20.249C18.3522 20.249 18.2058 20.2782 18.0692 20.3348C17.9326 20.3914 17.8086 20.4744 17.7041 20.579L12.0791 26.204C11.9745 26.3085 11.8915 26.4325 11.8349 26.5691C11.7783 26.7057 11.7491 26.8521 11.7491 26.9999C11.7491 27.1478 11.7783 27.2941 11.8349 27.4307C11.8915 27.5673 11.9745 27.6914 12.0791 27.7958L17.7041 33.4208C17.8086 33.5254 17.9326 33.6084 18.0692 33.665C18.2058 33.7217 18.3522 33.7508 18.5 33.7508C18.6479 33.7508 18.7943 33.7217 18.9308 33.665C19.0674 33.6084 19.1915 33.5254 19.296 33.4208L24.921 27.7958C25.0256 27.6914 25.1085 27.5673 25.1652 27.4307C25.2218 27.2941 25.2509 27.1478 25.2509 26.9999C25.2509 26.8521 25.2218 26.7057 25.1652 26.5691C25.1085 26.4325 25.0256 26.3085 24.921 26.204L19.296 20.579ZM33.921 17.204L28.296 11.579C28.1915 11.4744 28.0674 11.3914 27.9308 11.3348C27.7943 11.2782 27.6479 11.249 27.5 11.249C27.3522 11.249 27.2058 11.2782 27.0692 11.3348C26.9326 11.3914 26.8086 11.4744 26.7041 11.579L21.0791 17.204C20.9745 17.3085 20.8915 17.4325 20.8349 17.5691C20.7783 17.7057 20.7491 17.8521 20.7491 17.9999C20.7491 18.1478 20.7783 18.2941 20.8349 18.4307C20.8915 18.5673 20.9745 18.6914 21.0791 18.7958L26.7041 24.4208C26.8086 24.5254 26.9326 24.6084 27.0692 24.665C27.2058 24.7217 27.3522 24.7508 27.5 24.7508C27.6479 24.7508 27.7943 24.7217 27.9308 24.665C28.0674 24.6084 28.1915 24.5254 28.296 24.4208L33.921 18.7958C34.0256 18.6914 34.1085 18.5673 34.1652 18.4307C34.2218 18.2941 34.2509 18.1478 34.2509 17.9999C34.2509 17.8521 34.2218 17.7057 34.1652 17.5691C34.1085 17.4325 34.0256 17.3085 33.921 17.204ZM15.921 17.204L10.296 11.579C10.1915 11.4744 10.0674 11.3914 9.93084 11.3348C9.79427 11.2782 9.64787 11.249 9.50003 11.249C9.35219 11.249 9.2058 11.2782 9.06922 11.3348C8.93265 11.3914 8.80858 11.4744 8.70409 11.579L3.07909 17.204C2.97449 17.3085 2.89152 17.4325 2.8349 17.5691C2.77829 17.7057 2.74915 17.8521 2.74915 17.9999C2.74915 18.1478 2.77829 18.2941 2.8349 18.4307C2.89152 18.5673 2.97449 18.6914 3.07909 18.7958L8.70409 24.4208C8.80858 24.5254 8.93265 24.6084 9.06922 24.665C9.2058 24.7217 9.35219 24.7508 9.50003 24.7508C9.64787 24.7508 9.79427 24.7217 9.93084 24.665C10.0674 24.6084 10.1915 24.5254 10.296 24.4208L15.921 18.7958C16.0256 18.6914 16.1085 18.5673 16.1652 18.4307C16.2218 18.2941 16.2509 18.1478 16.2509 17.9999C16.2509 17.8521 16.2218 17.7057 16.1652 17.5691C16.1085 17.4325 16.0256 17.3085 15.921 17.204Z" />
+                </svg>
+              </div>
+              <h4 class="font-geist text-neutral-800 font-semibold">Preferences & interests</h4>
+              <p class="text-neutral-400 group-hover:text-neutral-500 transition-colors duration-500 text-sm pr-1">
+                Madrasa is a comprehensive mobile app designed to serve the
+                diverse
+                needs of the
+                Muslim community—offering everything
+                from education</p>
+            </div>
+          </div>
         </div>
+        <div class="py-4">
+          <button
+            class="bg-violet-600 font-geist font-semibold text-white py-3 self-stretch w-max px-7 md:px-14 text-nowrap ">
+            Join Madrasa community
+          </button>
+        </div>
+
       </div>
+
     </section>
 
 
@@ -461,7 +565,7 @@
 
 
       <button
-        class="bg-madrasaPurple font-geist font-semibold text-white py-2.5 self-stretch w-full md:px-14 text-nowrap px-4 md:w-max">
+        class="bg-madrasaPurple font-geist font-semibold text-white py-3 self-stretch w-full md:px-14 text-nowrap px-4 md:w-max">
         Join Our Team
       </button>
 
@@ -530,7 +634,7 @@
         <!-- Submit Button -->
         <div class="lg:mx-auto lg:max-w-max lg:pt-4">
           <button type="submit"
-            class="bg-violet-700 font-geist font-semibold text-white py-2.5 self-stretch w-full md:px-3 text-nowrap px-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 text-sm lg:w-max lg:px-20">
+            class="bg-violet-700 font-geist font-semibold text-white py-3 self-stretch w-full md:px-3 text-nowrap px-4 shadow-sm text-sm lg:w-max lg:px-20">
             Submit
           </button>
         </div>
