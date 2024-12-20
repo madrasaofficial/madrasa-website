@@ -177,3 +177,22 @@ if (progressElement && loaderElement) {
 } else {
   console.error('Progress or loader element is missing in the DOM.');
 }
+
+// Hamburger Menu Animation
+const menuButton = document.getElementById('menuButton');
+const closeButton = document.getElementById('closeMenuButton');
+const menuPanel = document.getElementById('menuPanel');
+
+menuButton?.addEventListener('click', () => {
+  menuPanel?.classList.remove("hidden");
+  menuButton.classList.add('hidden');
+  closeButton?.classList.remove('hidden');
+});
+
+closeButton?.addEventListener('click', () => {
+  menuPanel?.classList.add("hidden");
+  menuButton?.classList.remove('hidden');
+  closeButton?.classList.add('hidden');
+
+});
+
