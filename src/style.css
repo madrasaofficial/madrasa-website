@@ -216,5 +216,5 @@ svg {
 }
 
 .animate-loader {
-  animation: loadProgress 0s ease-in-out forwards;
+  animation: loadProgress 1.5s ease-in-out forwards;
 }

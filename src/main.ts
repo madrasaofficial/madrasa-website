@@ -8,7 +8,7 @@ const categoryContainer = document.getElementById("faq-categories") as HTMLDivEl
 // Function to Render Category Buttons
 function renderCategoryButtons() {
   // Step 1: Get unique categories
-  const categories = ["All", ...new Set(FAQs.map((faq) => faq.category))];
+  const categories = [...new Set(FAQs.map((faq) => faq.category))];
 
   // Step 2: Create and inject buttons
   categories.forEach((category) => {
@@ -36,8 +36,6 @@ renderCategoryButtons();
 // DOM Elements
 const faqContainer = document.getElementById("faq-container") as HTMLDivElement;
 const categoryButtons = document.querySelectorAll("[data-category]");
-
-
 
 
 // Function to Render FAQs
