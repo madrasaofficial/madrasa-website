@@ -83,7 +83,7 @@
       </svg>
 
       <div class="max-w-64 w-full bg-neutral-300 bg-opacity-85 h-[4px] rounded-full overflow-hidden mx-auto">
-        <div id="progress" class="bg-neutral-50 h-full w-0 rounded-full animate-loader"></div>
+        <div id="progress" class="bg-neutral-white h-full w-0 rounded-full animate-loader"></div>
       </div>
     </div>
   </div>
@@ -120,7 +120,7 @@
           <path d="M6.60508 1.69401C7.79418 -0.0713507 10.3924 -0.071354 11.5815 1.694L18.1865 11.5H0L6.60508 1.69401Z"
             fill="white" />
         </svg>
-        <div class="bg-neutral-50 float-right max-w-[360px] rounded-2xl p-4 py-5 space-y-2">
+        <div class="bg-neutral-white float-right max-w-[360px] rounded-2xl p-4 py-5 space-y-2">
           <p class="text-neutral-400 text-left">Menu</p>
 
           <button
@@ -189,27 +189,28 @@
 
 
       <!-- Content -->
-      <div class="px-6 z-10 space-y-1.5 lg:space-y-2 md:max-w-xl md:px-0 lg:translate-y-12">
+      <div class="px-6 z-10 space-y-1.5 lg:space-y-2.5 md:max-w-xl md:px-0 lg:translate-y-12">
         <img src="/madrasa-text.svg" alt="Madrasa written in Arabic" class="mx-auto lg:mx-0">
-        <h2 class="font-poltawsky text-4xl font-medium leading-10 text-center lg:text-left">
+        <h2
+          class="font-poltawsky text-4xl font-medium leading-10 text-center lg:text-left lg:text-[48px] lg:leading-[52px]">
           Where the Ummah <br class="hidden md:inline"> connects to Learn, Inspire & Strengthen Faith.
         </h2>
       </div>
       <div
         class="z-10 pt-8 px-4 md:px-8 w-full space-y-3 md:flex md:gap-4 md:space-y-0 md:max-w-xl md:justify-center lg:px-0 lg:justify-start lg:translate-y-12">
-        <button
-          class="bg-madrasaPurple font-geist font-semibold text-white py-3 self-stretch w-full md:px-3 text-nowrap px-4 lg:w-max lg:px-6 shadow-sm focus:outline-none focus:ring-1 focus:ring-violet-500 focus:ring-offset-1">
-          <a class="font-geist font-semibold text-neutral-50 text-center" href="https://forms.gle/zbQxvagxEiGxXWKy8"
-            target="_blank">
+        <a class="font-geist font-semibold hover:text-neutral-50 text-neutral-50 text-center"
+          href="https://forms.gle/zbQxvagxEiGxXWKy8" target="_blank">
+          <button
+            class="bg-madrasaPurple font-geist font-semibold text-white py-3 self-stretch w-full md:px-3 text-nowrap px-4 lg:w-max lg:px-6 shadow-sm focus:outline-none focus:ring-1 focus:ring-violet-500 focus:ring-offset-1">
             Join as a Tutor
-          </a>
-        </button>
-        <button
-          class="bg-white font-geist font-semibold text-madrasaPurple py-3 self-stretch w-full md:px-3 text-nowrap px-4 lg:w-max lg:px-6 shadow-sm focus:outline-none focus:ring-1 focus:ring-violet-500 focus:ring-offset-1">
-          <a href="https://forms.gle/Mey8dciSoH3dgsX39" target="_blank">
+          </button>
+        </a>
+        <a href="https://forms.gle/Mey8dciSoH3dgsX39" target="_blank">
+          <button
+            class="bg-white font-geist font-semibold text-madrasaPurple py-3 self-stretch w-full md:px-3 text-nowrap px-4 lg:w-max lg:px-6 shadow-sm focus:outline-none focus:ring-1 focus:ring-violet-500 focus:ring-offset-1">
             Get early access
-          </a>
-        </button>
+          </button>
+        </a>
       </div>
     </section>
 
@@ -225,7 +226,7 @@
         <!-- Content -->
         <div class="px-8 space-y-2 md:space-y-3 z-10 text-neutral-50">
           <h3 class="font-playwrite md:text-lg text-base text-neutral">About Madrasa</h3>
-          <h1 class="font-poltawsky md:text-4xl font-bold text-3xl">Your Gateway to Islamic <br
+          <h1 class="font-poltawsky md:text-4xl lg:text-[40px] font-bold text-3xl">Your Gateway to Islamic <br
               class="hidden md:inline"> Learning and Growth
           </h1>
         </div>
@@ -244,14 +245,16 @@
 
 
     <!-- Features -->
-    <section id="features" class="px-4 md:px-8 py-16 pt-20 relative bg-neutral-50">
+    <section id="features" class="px-4 md:px-8 py-16 pt-20 relative bg-neutral-white">
       <!-- Content -->
-      <div class="md:space-y-8 md:max-w-2xl md:mx-auto lg:max-w-full lg:px-20">
-        <div class="lg:px-8 space-y-2 z-10 text-neutral-50 pb-12 md:space-y-4 lg:max-w-2xl lg:mx-auto">
-          <h3 class="font-playwrite md:text-lg text-madrasaPurple">Features</h3>
-          <h1 class="font-poltawsky md:text-4xl font-bold text-3xl text-neutral-800">
-            One app for education, <br class="hidden md:inline lg:hidden"> prayer, and daily needs of the Ummah.
-          </h1>
+      <div class="md:space-y-8 md:max-w-2xl md:mx-auto lg:max-w-full lg:px-20 pb-3">
+        <div class="lg:px-8 space-y-2 z-10 text-neutral-50 md:space-y-4 lg:max-w-2xl lg:mx-auto">
+          <div class="space-y-4">
+            <h3 class="font-playwrite md:text-lg text-madrasaPurple">Features</h3>
+            <h1 class="font-poltawsky md:text-4xl lg:text-[40px] font-bold text-3xl text-neutral-800">
+              One app for education, <br class="hidden md:inline lg:hidden"> prayer, and daily needs of the Ummah.
+            </h1>
+          </div>
         </div>
 
         <!-- Feature Cards -->
@@ -269,12 +272,13 @@
                 your own pace and grow in knowledge and faith.
               </p>
             </div>
-            <button class="rounded-full mx-auto bg-neutral-900 px-8 md:px-8 py-3 items-center justify-center md:hidden">
-              <a class="font-geist font-semibold text-neutral-50 text-center" href="https://forms.gle/zbQxvagxEiGxXWKy8"
-                target="_blank">
+            <a class="font-geist font-semibold text-neutral-50 text-center" href="https://forms.gle/zbQxvagxEiGxXWKy8"
+              target="_blank">
+              <button
+                class="rounded-full mx-auto bg-neutral-900 px-8 md:px-10 py-3 items-center justify-center lg:px-12">
                 Join as a Tutor
-              </a>
-            </button>
+              </button>
+            </a>
           </div>
 
           <div
@@ -290,12 +294,14 @@
                   for guidance, clarity, and peace. Your companion for wellness and support.
                 </p>
               </div>
-              <button
-                class="rounded-full mx-auto bg-neutral-900 px-8 md:px-8 py-3 items-center justify-center md:hidden">
-                <p class="font-geist font-semibold text-neutral-50 text-center">
-                  Join as a Scholar
-                </p>
-              </button>
+              <a class="font-geist font-semibold text-neutral-50 text-center" href="" target="_blank">
+                <button
+                  class="rounded-full mx-auto bg-neutral-900 px-8 md:px-10 py-3 items-center justify-center lg:px-12">
+                  <p class="font-geist font-semibold text-neutral-50 text-center">
+                    Join as a Scholar
+                  </p>
+                </button>
+              </a>
             </div>
           </div>
 
@@ -315,7 +321,7 @@
                 and accessible learning for you and your family.
               </p>
             </div>
-            <button class="rounded-full mx-auto bg-neutral-900 px-8 md:px-8 py-3 items-center justify-center md:hidden">
+            <button class="rounded-full mx-auto bg-neutral-900 px-8 md:px-10 py-3 items-center justify-center lg:px-12">
               <a class="font-geist font-semibold text-neutral-50 text-center" href="https://forms.gle/Mey8dciSoH3dgsX39"
                 target="_blank">
                 Get early access
@@ -338,7 +344,7 @@
                 your faith effortlessly and strengthen your Imaan daily.
               </p>
             </div>
-            <button class="rounded-full mx-auto bg-neutral-900 px-8 md:px-8 py-3 items-center justify-center md:hidden">
+            <button class="rounded-full mx-auto bg-neutral-900 px-8 md:px-10 py-3 items-center justify-center lg:px-12">
               <a class="font-geist font-semibold text-neutral-50 text-center" href="https://forms.gle/Mey8dciSoH3dgsX39"
                 target="_blank">
                 Get early access
@@ -353,17 +359,19 @@
     </section>
 
     <!-- Testimonials Section-->
-    <section id="testimonials" class="px-4 md:px-8 py-16 pt-20 relative bg-neutral-50 md:pb-16 ">
+    <section id="testimonials" class="px-4 md:px-8 py-16 pt-20 relative bg-neutral-white md:pb-16 ">
       <div class="space-y-4 md:space-y-8">
-        <h3 class="font-playwrite md:text-lg text-madrasaPurple">Testimonials</h3>
-        <h1 class="font-poltawsky md:text-4xl font-bold text-3xl pb-3 text-neutral-800 px-8">
-          What our<br>happy users say.
-        </h1>
+        <div class="space-y-4">
+          <h3 class="font-playwrite md:text-lg text-madrasaPurple">Testimonials</h3>
+          <h1 class="font-poltawsky md:text-4xl lg:text-[40px] font-bold text-3xl pb-3 text-neutral-800 px-8">
+            What our <br class="inline lg:hidden">happy users say.
+          </h1>
+        </div>
 
         <!-- Testimonial cards -->
         <div
           class="space-y-4 md:grid md: md:grid-cols-2 md:max-w-2xl md:mx-auto md:gap-4 md:space-y-0 lg:max-w-7xl lg:grid-cols-3 lg:mx-auto">
-          <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border"
+          <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border overflow-clip"
             style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
             <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
               class="absolute w-full top-0">
@@ -386,7 +394,7 @@
             </div>
           </div>
 
-          <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border"
+          <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border overflow-clip"
             style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
             <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
               class="absolute w-full top-0">
@@ -409,7 +417,7 @@
             </div>
           </div>
 
-          <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border"
+          <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border overflow-clip"
             style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
             <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
               class="absolute w-full top-0">
@@ -432,7 +440,7 @@
             </div>
           </div>
 
-          <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border"
+          <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border overflow-clip"
             style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
             <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
               class="absolute w-full top-0">
@@ -475,12 +483,14 @@
     </section>
 
     <!-- More features Section -->
-    <section id="more features" class="px-4 md:px-8 py-16 pt-20 relative bg-neutral-50">
+    <section id="more features" class="px-4 md:px-8 py-16 pt-20 relative bg-neutral-white">
       <div class="space-y-4 md:space-y-6 md:max-w-2xl md:mx-auto lg:max-w-7xl lg:px-20">
-        <h3 class="font-playwrite md:text-lg text-madrasaPurple">More Features</h3>
-        <h1 class="font-poltawsky md:text-4xl font-bold text-3xl text-neutral-800 px-8">
-          We still have much<br class="hidden md:inline lg:inline"> more for ummah
-        </h1>
+        <div class="space-y-4">
+          <h3 class="font-playwrite md:text-lg text-madrasaPurple">More Features</h3>
+          <h1 class="font-poltawsky md:text-4xl lg:text-[40px] font-bold text-3xl text-neutral-800 px-8">
+            We still have much<br class="hidden md:inline lg:inline"> more for ummah
+          </h1>
+        </div>
 
         <!-- More Feature Cards -->
         <div
@@ -511,8 +521,8 @@
               class="bg-decor absolute -scale-y-100 bottom-0 opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-90">
             <div class="px-4 py-6 space-y-2 z-20 relative">
               <div class="pb-3 pt-1">
-                <svg class="fill-black group-hover:fill-violet-500 transition-colors duration-500 ease-in" width="37" height="36"
-                  viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="fill-black group-hover:fill-violet-500 transition-colors duration-500 ease-in" width="37"
+                  height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M32 18C31.6167 17.9999 31.2361 18.0655 30.875 18.1941V18C30.875 12.1247 26.5058 9.21656 23.315 7.09312C21.335 5.77406 19.625 4.64062 19.625 3.375C19.625 3.07663 19.5065 2.79048 19.2955 2.5795C19.0845 2.36853 18.7984 2.25 18.5 2.25C18.2016 2.25 17.9155 2.36853 17.7045 2.5795C17.4935 2.79048 17.375 3.07663 17.375 3.375C17.375 4.64062 15.665 5.77406 13.685 7.09312C10.4942 9.21656 6.125 12.1247 6.125 18V18.1941C5.61603 18.0141 5.07132 17.9589 4.53658 18.033C4.00185 18.1071 3.4927 18.3085 3.05187 18.6201C2.61104 18.9317 2.25139 19.3445 2.00311 19.8239C1.75483 20.3032 1.62517 20.8352 1.625 21.375V29.25C1.625 29.5484 1.74353 29.8345 1.9545 30.0455C2.16548 30.2565 2.45163 30.375 2.75 30.375H10.625C10.9234 30.375 11.2095 30.2565 11.4205 30.0455C11.6315 29.8345 11.75 29.5484 11.75 29.25V24.75C11.75 24.1533 11.9871 23.581 12.409 23.159C12.831 22.7371 13.4033 22.5 14 22.5C14.5967 22.5 15.169 22.7371 15.591 23.159C16.0129 23.581 16.25 24.1533 16.25 24.75V29.25C16.25 29.5484 16.3685 29.8345 16.5795 30.0455C16.7905 30.2565 17.0766 30.375 17.375 30.375H19.625C19.9234 30.375 20.2095 30.2565 20.4205 30.0455C20.6315 29.8345 20.75 29.5484 20.75 29.25V24.75C20.75 24.1533 20.9871 23.581 21.409 23.159C21.831 22.7371 22.4033 22.5 23 22.5C23.5967 22.5 24.169 22.7371 24.591 23.159C25.0129 23.581 25.25 24.1533 25.25 24.75V29.25C25.25 29.5484 25.3685 29.8345 25.5795 30.0455C25.7905 30.2565 26.0766 30.375 26.375 30.375H34.25C34.5484 30.375 34.8345 30.2565 35.0455 30.0455C35.2565 29.8345 35.375 29.5484 35.375 29.25V21.375C35.375 20.4799 35.0194 19.6214 34.3865 18.9885C33.7536 18.3556 32.8951 18 32 18ZM6.125 28.125H3.875V21.375C3.875 21.0766 3.99353 20.7905 4.2045 20.5795C4.41548 20.3685 4.70163 20.25 5 20.25C5.29837 20.25 5.58452 20.3685 5.7955 20.5795C6.00647 20.7905 6.125 21.0766 6.125 21.375V28.125ZM33.125 28.125H30.875V21.375C30.875 21.0766 30.9935 20.7905 31.2045 20.5795C31.4155 20.3685 31.7016 20.25 32 20.25C32.2984 20.25 32.5845 20.3685 32.7955 20.5795C33.0065 20.7905 33.125 21.0766 33.125 21.375V28.125Z" />
                 </svg>
@@ -609,10 +619,12 @@
 
         </div>
         <div class="py-4">
-          <button
-            class="bg-violet-600 font-geist font-semibold text-white py-3 self-stretch w-max px-7 md:px-14 text-nowrap ">
-            Get early access
-          </button>
+          <a href="https://forms.gle/Mey8dciSoH3dgsX39" target="_blank">
+            <button
+              class="bg-violet-600 font-geist font-semibold text-white py-3 self-stretch w-max px-7 md:px-14 text-nowrap ">
+              Get early access
+            </button>
+          </a>
         </div>
 
       </div>
@@ -621,13 +633,15 @@
 
 
     <!-- FAQ -->
-    <section id="FAQ" class="px-4 md:px-8 py-16 pt-20 relative space-y-4 bg-neutral-50">
+    <section id="FAQ" class="px-4 md:px-8 py-16 pt-20 relative space-y-4 bg-neutral-white">
       <div class="space-y-2 text-center mx-auto">
-        <h3 class="font-playwrite md:text-lg text-madrasaPurple">Frequently Asked Questions</h3>
-        <h2 class="font-poltawsky text-neutral-800 text-3xl md:text-4xl font-medium leading-10 text-center">
-          Find answers and see<br class="inline md:hidden"> how<br class="hidden lg:inline"> Madrasa App can<br
-            class="inline md:hidden"> help you.
-        </h2>
+        <div class="space-y-4">
+          <h3 class="font-playwrite md:text-lg text-madrasaPurple">Frequently Asked Questions</h3>
+          <h2 class="font-poltawsky text-neutral-800 text-3xl md:text-4xl font-medium leading-10 text-center">
+            Find answers and see<br class="inline md:hidden"> how<br class="hidden lg:inline"> Madrasa App can<br
+              class="inline md:hidden"> help you.
+          </h2>
+        </div>
       </div>
 
       <!-- Category Tabs -->
@@ -654,10 +668,12 @@
 
       <!-- Content -->
       <div class="px-8 space-y-2 z-10 text-neutral-50">
-        <h3 class="font-playwrite md:text-lg text-neutral">Serve for Ummah</h3>
-        <h1 class="font-poltawsky md:text-4xl font-bold text-3xl">Join Madrasa App: <br> Empower the Ummah</h1>
+        <div class="space-y-4">
+          <h3 class="font-playwrite md:text-lg text-neutral">Serve for Ummah</h3>
+          <h1 class="font-poltawsky md:text-4xl lg:text-[40px] font-bold text-3xl">Join Madrasa App: <br> Empower the
+            Ummah</h1>
+        </div>
       </div>
-
 
       <div class="px-8 text-neutral-300 md:text-lg lg:max-w-7xl lg:mx-auto">
         <img src="./src/./images/serve-ummah-wide.png" alt="All the tools"
@@ -675,25 +691,27 @@
       <img src="./src/./images/serve-ummah.png" alt="All the tools" class="py-9 md:hidden">
 
 
-      <button
-        class="bg-madrasaPurple font-geist font-semibold text-white py-3 self-stretch w-full md:px-14 text-nowrap px-4 md:w-max">
-        <a href="https://forms.gle/NwAvPJ2AYqMwgexC6" target="_blank">
+      <a href="https://forms.gle/NwAvPJ2AYqMwgexC6" target="_blank" class="block">
+        <button
+          class="bg-madrasaPurple font-geist font-semibold text-white py-3 self-stretch w-full md:px-14 text-nowrap px-4 md:w-max">
           Join Our Team
-        </a>
-      </button>
+        </button>
+      </a>
 
     </section>
 
 
     <!-- Contact -->
-    <section id="contact" class="px-4 md:px-8 py-16 pt-20 relative space-y-4 lg:space-y-10 bg-neutral-50">
+    <section id="contact" class="px-4 md:px-8 py-16 pt-20 relative space-y-4 lg:space-y-10 bg-neutral-white">
 
       <!-- Content -->
       <div class="px-8 space-y-2 z-10 text-neutral-50">
-        <h3 class="font-playwrite md:text-lg text-madrasaPurple">Contact Us</h3>
-        <h1 class="font-poltawsky md:text-4xl font-bold text-3xl text-neutral-800">
-          Still have any queries<br class="hidden md:inline"> connect with us?
-        </h1>
+        <div class="space-y-4">
+          <h3 class="font-playwrite md:text-lg text-madrasaPurple">Contact Us</h3>
+          <h1 class="font-poltawsky md:text-4xl lg:text-[40px] font-bold text-3xl text-neutral-800">
+            Still have any queries<br class="hidden md:inline"> connect with us?
+          </h1>
+        </div>
       </div>
       <!-- Form -->
 
@@ -704,14 +722,14 @@
             <label for="first-name" class="block text-sm font-semibold lg:font-semibold text-gray-500">First
               name</label>
             <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required
-              class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
+              class="mt-1 block w-full rounded-xl border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
           </div>
 
           <!-- Last Name -->
           <div class="md:w-1/2">
             <label for="last-name" class="block text-sm font-semibold lg:font-semibold text-gray-500">Last name</label>
             <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required
-              class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
+              class="mt-1 block w-full rounded-xl border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
           </div>
         </div>
 
@@ -720,7 +738,7 @@
           <div class="md:w-1/2">
             <label for="email" class="block text-sm font-semibold lg:font-semibold text-gray-500">Email address</label>
             <input type="email" id="email" name="email" placeholder="Enter your email address" required
-              class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
+              class="mt-1 block w-full rounded-xl border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
           </div>
 
           <!-- Phone Number -->
@@ -728,11 +746,11 @@
             <label for="phone" class="block text-sm font-semibold lg:font-semibold text-gray-500">Phone number</label>
             <div class="flex items-stretch mt-1">
               <span
-                class="inline-flex items-center px-3 rounded-l-md border border-r-0 bg-gray-100 text-gray-500 text-sm">
+                class="inline-flex items-center px-3 rounded-l-xl border border-r-0 bg-gray-100 text-gray-500 text-sm">
                 🇮🇳 +91
               </span>
               <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required
-                class="flex-1 block w-full rounded-r-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
+                class="flex-1 block w-full rounded-r-xl border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800" />
             </div>
           </div>
         </div>
@@ -741,7 +759,7 @@
         <div>
           <label for="message" class="block text-sm font-semibold lg:font-semibold text-gray-500">Add message</label>
           <textarea id="message" name="message" rows="4" placeholder="Write your query here..."
-            class="mt-1 block w-full rounded-md border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800"></textarea>
+            class="mt-1 block w-full rounded-xl border-gray-200 border-[1.5px] bg-transparent focus:ring-indigo-500 focus:border-indigo-500 p-2 text-neutral-800"></textarea>
         </div>
 
         <!-- Submit Button -->
