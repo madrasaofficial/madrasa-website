@@ -166,6 +166,13 @@ svg {
   height: 100svh;
 }
 
+/* FAQ Buttons */
+button.active
+{
+  color:white;
+  background-color: #111024;
+}
+
 @media (min-width: 1024px) {
   .hero-bg {
     background: linear-gradient(90deg,

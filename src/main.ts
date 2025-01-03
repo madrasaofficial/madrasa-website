@@ -31,6 +31,9 @@ function renderCategoryButtons() {
 // Call function to render buttons
 renderCategoryButtons();
 
+// Make the first button active by default
+categoryContainer.firstElementChild?.classList.add('active');
+
 
 
 // DOM Elements
@@ -98,29 +101,10 @@ categoryButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const category = button.getAttribute("data-category") || "All";
     renderFAQs(category);
-  });
-});
-
-// Initial Render (Show All FAQs)
-renderFAQs("All");
-
-// Event Listeners for Category Buttons
-categoryButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const category = button.getAttribute("data-category") || "All";
-    renderFAQs(category);
-  });
-});
-
-// Initial Render (Show All FAQs)
-renderFAQs("All");
-
-
-// Event Listeners for Category Buttons
-categoryButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const category = button.getAttribute("data-category") || "All";
-    renderFAQs(category);
+    categoryButtons.forEach(btn => {
+      btn.classList.remove('active');
+    })
+    button.classList.add('active');
   });
 });
 
@@ -194,3 +178,64 @@ closeButton?.addEventListener('click', () => {
 
 });
 
+//Intercept the form submission request to handle the feedback
+window.addEventListener("load", () => {
+  const form = document.getElementById("contact-form") as HTMLFormElement | null;
+  const toast = document.getElementById("toast") as HTMLDivElement | null;
+
+  const toastBg = document.getElementById("toast-bg") as HTMLDivElement | null;
+  const toastIcon = document.getElementById("toast-icon") as HTMLImageElement | null; // for changing icon
+  const toastHeading = document.getElementById("toast-head") as HTMLSpanElement | null; // for changing heading
+  const toastMessage = document.getElementById("toast-message") as HTMLSpanElement | null; // for changing content
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const action = form.action;
+      if (!action) {
+        alert("Form action URL is missing.");
+        return;
+      }
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(action, {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          // Add success toast content
+          toastBg?.classList.add("from-[#d9f4d9]"); //change bg to green
+          toastIcon && (toastIcon.src = "/success.svg"); // change icon to success
+          toastHeading && (toastHeading.textContent = "Alhamdulillah!");
+          toastMessage && (toastMessage.textContent = "Your query has been submitted. We’ll respond soon, Insha’Allah. May Allah guide us all. 🤲");
+          toast?.classList.add("!-translate-y-5", "!md:-translate-y-32", "opacity-100"); // change opacity to 100 and move it up
+
+          // Hide toast after 5s
+          setTimeout(() => {
+            toast?.classList.remove("!-translate-y-5", "!md:-translate-y-32");
+          }, 5000);
+
+          // clear the form
+          form.reset();
+        }
+      } catch (error) {
+        console.error("Form submission failed:", error);
+        toastBg?.classList.add("from-[#ffe0e4]"); //change bg to red
+        toast?.classList.add("!-translate-y-5", "opacity-100"); // change opacity to 100 and move it up
+        toastIcon && (toastIcon.src = "/failure.svg"); // change icon to failure
+        toastHeading && (toastHeading.textContent = "Something went wrong.");
+        toastMessage && (toastMessage.textContent = "Please try again. JazakAllahu Khair for your patience.");
+
+        setTimeout(() => {
+          toast?.classList.remove("!-translate-y-5", "!md:-translate-y-32");
+        }, 5000);
+      }
+    });
+  } else {
+    console.warn("Form element with id 'my-form' not found.");
+  }
+});
