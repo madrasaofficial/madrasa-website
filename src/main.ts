@@ -35,21 +35,16 @@ renderCategoryButtons();
 categoryContainer.firstElementChild?.classList.add('active');
 
 
-
 // DOM Elements
 const faqContainer = document.getElementById("faq-container") as HTMLDivElement;
 const categoryButtons = document.querySelectorAll("[data-category]");
 
 
 // Function to Render FAQs
-// Function to Render FAQs
 function renderFAQs(category: string) {
   faqContainer.innerHTML = ""; // Clear existing FAQs
 
-  const filteredFAQs =
-    category === "All"
-      ? FAQs
-      : FAQs.filter((faq) => faq.category === category);
+  const filteredFAQs = FAQs.filter((faq) => faq.category === category);
 
   // Create FAQ items
   filteredFAQs.forEach((faq) => {
@@ -109,7 +104,7 @@ categoryButtons.forEach((button) => {
 });
 
 // Initial Render (Show All FAQs)
-renderFAQs("All");
+renderFAQs(FAQs[0].category);
 
 
 // State for more features card
@@ -239,3 +234,15 @@ window.addEventListener("load", () => {
     console.warn("Form element with id 'my-form' not found.");
   }
 });
+
+
+// Adding interactivity to the menu buttons
+const contactBtn = document.querySelector("#contact-button") as HTMLButtonElement;
+const communityBtn = document.querySelector("#community-button") as HTMLButtonElement;
+
+contactBtn?.addEventListener("click", () => {
+  const c = document.querySelector("#contact");
+  c?.scrollIntoView({ block: "start", inline: "nearest", behavior: 'smooth' });
+  console.log(c);
+
+})
