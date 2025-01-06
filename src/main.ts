@@ -160,18 +160,23 @@ const menuButton = document.getElementById('menuButton');
 const closeButton = document.getElementById('closeMenuButton');
 const menuPanel = document.getElementById('menuPanel');
 
-menuButton?.addEventListener('click', () => {
-  menuPanel?.classList.remove("hidden");
-  menuButton.classList.add('hidden');
-  closeButton?.classList.remove('hidden');
-});
-
-closeButton?.addEventListener('click', () => {
+function closeMenu() {
   menuPanel?.classList.add("hidden");
   menuButton?.classList.remove('hidden');
   closeButton?.classList.add('hidden');
+}
 
-});
+function openMenu() {
+  menuPanel?.classList.remove("hidden");
+  menuButton?.classList.add('hidden');
+  closeButton?.classList.remove('hidden');
+}
+
+
+menuButton?.addEventListener('click', openMenu);
+closeButton?.addEventListener('click', closeMenu);
+
+
 
 //Intercept the form submission request to handle the feedback
 window.addEventListener("load", () => {
@@ -243,6 +248,24 @@ const communityBtn = document.querySelector("#community-button") as HTMLButtonEl
 contactBtn?.addEventListener("click", () => {
   const c = document.querySelector("#contact");
   c?.scrollIntoView({ block: "start", inline: "nearest", behavior: 'smooth' });
-  console.log(c);
-
+  closeMenu();
 })
+
+communityBtn?.addEventListener("click", () => {
+  closeMenu();
+})
+
+
+
+window.addEventListener('scroll', function () {
+  const header = document.getElementById('top-bar');
+  if (header) {
+    if (window.scrollY > 1.45 * window.innerHeight) {
+      header.classList.add('!bg-[#170338]');
+    } else {
+      header.classList.remove('!bg-[#170338]');
+    }
+  } else {
+    console.warn("header not found");
+  }
+});

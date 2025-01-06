@@ -88,8 +88,10 @@
   <div id="app">
 
     <!-- Top Bar -->
-    <header class="px-5  md:px-8 flex absolute z-50 w-full items-center justify-between top-8 md:top-12 lg:px-24 ">
-      <img class="" src="/logo.svg" alt="Madrasa Logo">
+    <header
+      class="px-5 md:px-8 flex fixed top-0 z-50 w-full items-center justify-between py-5 md:py-7 lg:px-24 bg-transparent transition-colors duration-300 ease-in-out lg:!bg-transparent lg:!absolute lg:py-12"
+      id="top-bar">
+      <img class="drop-shadow-md" src="/logo.svg" alt="Madrasa Logo">
 
       <button id="menuButton"
         class="bg-purple-50 text-purple-800 font-medium font-geist flex items-center gap-1.5 w-max px-3 py-1.5 rounded-3xl tracking-tight lg:hidden relative cursor-pointer">
@@ -110,7 +112,8 @@
       </button>
 
 
-      <div class="absolute top-10 w-full left-1/2 -translate-x-1/2  px-5 py-1.5 space-y-0 z-40 hidden" id="menuPanel">
+      <div class="absolute top-16 w-full left-1/2 -translate-x-1/2  px-5 py-1.5 space-y-0 z-40 drop-shadow-md hidden"
+        id="menuPanel">
         <svg class="relative top-[2.5px] ml-auto right-8" width="20" height="16" viewBox="0 0 19 12" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path d="M6.60508 1.69401C7.79418 -0.0713507 10.3924 -0.071354 11.5815 1.694L18.1865 11.5H0L6.60508 1.69401Z"
