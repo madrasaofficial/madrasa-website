@@ -1,0 +1,119 @@
+<!-- Testimonials Section-->
+<section id="testimonials" class="px-4 md:px-8 py-16 pt-20 relative bg-white md:pb-16 ">
+  <div class="space-y-4 md:space-y-8">
+    <div class="space-y-4">
+      <h3 class="font-playwrite md:text-lg text-madrasaPurple">Testimonials</h3>
+      <h1 class="font-poltawsky md:text-4xl lg:text-[40px] font-bold text-3xl pb-3 text-neutral-800 px-8">
+        What our <br class="inline lg:hidden">happy users say.
+      </h1>
+    </div>
+
+    <!-- Testimonial cards -->
+    <div
+      class="space-y-4 md:grid md: md:grid-cols-2 md:max-w-2xl md:mx-auto md:gap-4 md:space-y-0 lg:max-w-7xl lg:grid-cols-3 lg:mx-auto">
+      <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border overflow-clip"
+        style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
+        <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
+          class="absolute w-full top-0">
+        <!-- card content -->
+        <div class="space-y-6 z-10 text-left relative">
+          <p class="text-neutral-800 md:text-lg">
+            Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim
+            community—offering
+            everything
+            from education
+          </p>
+          <div class="flex w-full justify-between items-stretch">
+            <div>
+              <p class="font-semibold text-neutral-900 md:text-lg">Justus Menke</p>
+              <p class="font-medium text-xs text-neutral-400 md:text-sm">CEO Eronaman</p>
+            </div>
+            <img src="/person.jpg" alt="Justus Menke" class="max-w-11 object-cover rounded-full aspect-square">
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border overflow-clip"
+        style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
+        <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
+          class="absolute w-full top-0">
+        <!-- card content -->
+        <div class="space-y-6 z-10 text-left relative">
+          <p class="text-neutral-800 md:text-lg">
+            Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim
+            community—offering
+            everything
+            from education
+          </p>
+          <div class="flex w-full justify-between items-stretch">
+            <div>
+              <p class="font-semibold text-neutral-900 md:text-lg">Justus Menke</p>
+              <p class="font-medium text-xs text-neutral-400 md:text-sm">CEO Eronaman</p>
+            </div>
+            <img src="/person.jpg" alt="Justus Menke" class="max-w-11 object-cover rounded-full aspect-square">
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border overflow-clip"
+        style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
+        <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
+          class="absolute w-full top-0">
+        <!-- card content -->
+        <div class="space-y-6 z-10 text-left relative">
+          <p class="text-neutral-800 md:text-lg">
+            Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim
+            community—offering
+            everything
+            from education
+          </p>
+          <div class="flex w-full justify-between items-stretch">
+            <div>
+              <p class="font-semibold text-neutral-900 md:text-lg">Justus Menke</p>
+              <p class="font-medium text-xs text-neutral-400 md:text-sm">CEO Eronaman</p>
+            </div>
+            <img src="/person.jpg" alt="Justus Menke" class="max-w-11 object-cover rounded-full aspect-square">
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 pt-20 py-5 rounded-xl relative border-gray-200 border overflow-clip"
+        style="opacity: 1;background: linear-gradient(180deg, #F1F1FF 0%, #FFF 20.39%);">
+        <img src="/testimonial-card-decor.svg" alt="testimonial background" aria-hidden="true"
+          class="absolute w-full top-0">
+        <!-- card content -->
+        <div class="space-y-6 z-10 text-left relative">
+          <p class="text-neutral-800 md:text-lg">
+            Madrasa is a comprehensive mobile app designed to serve the diverse needs of the Muslim
+            community—offering
+            everything
+            from education
+          </p>
+          <div class="flex w-full justify-between items-stretch">
+            <div>
+              <p class="font-semibold text-neutral-900 md:text-lg">Justus Menke</p>
+              <p class="font-medium text-xs text-neutral-400 md:text-sm">CEO Eronaman</p>
+            </div>
+            <img src="/person.jpg" alt="Justus Menke" class="max-w-11 object-cover rounded-full aspect-square">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- spacer -->
+    <div class="pt-2 md:hidden" aria-hidden="true"></div>
+
+    <button
+      class="flex gap-1.5 rounded-full mx-auto bg-violet-100 px-4 md:px-8 py-3 items-center justify-center md:hidden ">
+      <p class="font-geist font-semibold text-violet-700 text-center">
+        Load More Content
+      </p>
+      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.5 7.5L10.5 12.5L15.5 7.5" stroke="#6D2DD3" stroke-width="1.6" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+
+
+  </div>
+</section>

@@ -161,25 +161,24 @@ svg {
   background: linear-gradient(180deg,
       rgba(0, 0, 0, 0.00) 22.07%,
       rgba(0, 0, 0, 0.85) 68%),
-    url('./images/hero.jpeg') left 25% center / cover no-repeat;
+    url('./images/hero.png') left 45% center / cover no-repeat;
   /* transform: scaleX(-1); */
   height: 100svh;
 }
 
 /* FAQ Buttons */
-button.active
-{
-  color:white;
+button.active {
+  color: white;
   background-color: #111024;
 }
 
 @media (min-width: 1024px) {
   .hero-bg {
     background: linear-gradient(90deg,
-        rgba(0, 0, 0, 0.00) 30%,
-        rgba(0, 0, 0, 0.86) 64%),
-      url('./images/hero.jpeg') left 25% center / cover no-repeat;
-    transform: scaleX(-1);
+        rgba(0, 0, 0, 0.85) 35%,
+        rgba(0, 0, 0, 0) 90%),
+      url('./images/hero.png') left 35% center / cover no-repeat;
+    /* transform: scaleX(-1); */
   }
 }
 
@@ -207,4 +206,21 @@ button.active
 
 .animate-loader {
   animation: loadProgress 1.5s ease-in-out forwards;
+}
+
+
+/* For the stupid browsers*/
+select {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -247,7 +247,7 @@ const communityBtn = document.querySelector("#community-button") as HTMLButtonEl
 
 contactBtn?.addEventListener("click", () => {
   const c = document.querySelector("#contact");
-  c?.scrollIntoView({ block: "start", inline: "nearest", behavior: 'smooth' });
+  c?.scrollIntoView({ block: "end", inline: "nearest", behavior: 'smooth' });
   closeMenu();
 })
 
