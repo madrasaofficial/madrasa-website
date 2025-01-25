@@ -38,6 +38,9 @@
   <meta name="twitter:image:alt" content="Madrasa App banner showcasing Islamic education resources">
   <meta name="twitter:site" content="@madrasaapp">
 
+  <!-- Whatsapp fix -->
+
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -72,6 +75,12 @@
 </head>
 
 <body class="overflow-hidden scroll-smooth">
+  <link itemprop="thumbnailUrl" href="https://madrasaapp.com/og-image.png">
+  <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
+    <link itemprop="url" href="https://madrasaapp.com/og-image.png">
+  </span>
+
+
   <div id="loader" class="fixed inset-0 bg-[#21084B] flex justify-center items-center z-[100] select-none"
     style="height: 100svh;">
     <div class="w-full space-y-6 md:space-y-8 mx-auto">
@@ -126,31 +135,33 @@
         </svg>
         <div class="bg-white float-right max-w-[360px] rounded-2xl p-4 py-5 space-y-2">
           <p class="text-neutral-400 text-left">Menu</p>
+          <a href="https://chat.whatsapp.com/Keu3aytIDbg5uJoOpxR4mD" target="_blank">
 
-          <button
-            class="flex w-full gap-2 shrink-0 items-stretch  justify-start border-neutral-200 active:outline-none focus:outline-none border rounded-xl overflow-clip"
-            id="community—button">
-            <div
-              class="flex h-full max-w-[72px] shrink-0 flex-col justify-center items-center self-stretch [background:#EFEEFF] px-[18px] py-[24px]">
-              <svg class="w-7 h-7 aspect-square" viewBox="0 0 34 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M0.798758 13.5435L0 10.6484C1.82512 10.309 4.84837 8.32455 5.24775 6.45174C5.68578 4.40712 4.29869 2.91231 3.9852 1.06527L6.7422 0C10.9164 5.62702 7.4293 12.6329 0.794463 13.5435H0.798758Z"
-                  fill="#6D2DD3" />
-                <path
-                  d="M20.2862 8.56627C21.0635 9.43824 22.9058 9.43394 23.6358 8.47177C24.8211 6.90823 25.053 4.99247 26.8781 3.72961C30.7688 1.03208 35.2951 5.85155 33.6546 9.97517C32.3577 13.2268 28.4713 12.7543 25.8904 11.3368C23.7045 12.793 20.8874 13.0851 18.7531 11.3712C16.6832 12.7973 14.2912 12.866 11.8949 12.3033C11.4312 12.1959 9.76063 11.8007 9.8637 11.208L10.9072 8.64359C12.2729 9.23206 16.928 9.96228 16.3783 7.56973C16.0648 6.19948 13.8231 3.23134 13.8188 2.64716C13.8188 2.2348 15.747 0.920398 16.0906 0.911807C16.9537 0.894626 18.6457 4.33097 19.0151 5.18576C19.3844 6.04056 19.7408 7.96061 20.2862 8.57056V8.56627ZM28.6259 6.27251C26.2425 8.635 27.8314 9.51986 30.6013 9.05165C31.413 8.51902 30.4253 6.57748 29.6093 6.28539L28.6259 6.27251Z"
-                  fill="#6D2DD3" />
-                <path
-                  d="M32.0097 14.1055C33.0232 17.632 34.7753 23.07 30.1546 24.6207C28.5828 25.149 25.3921 25.338 24.8252 23.418H24.4301C24.1853 23.5254 24.1338 23.9678 23.9491 24.131C22.4891 25.4368 18.2591 25.3552 17.2456 23.418C15.6395 25.2306 12.1739 25.4068 10.0439 24.4961C9.21078 24.1396 8.2746 22.9712 7.84087 22.1723C7.08076 20.772 6.94764 18.1002 4.50842 19.4576C2.55017 20.5486 3.38329 22.2067 3.80843 23.9463C2.88084 23.8862 1.21462 25.1576 0.66064 24.0365C-1.67981 19.2944 2.58882 15.218 7.34272 16.0255C10.6966 16.5925 9.60157 20.9825 11.9764 21.5022C15.5235 22.2797 15.6781 20.1363 16.0475 17.297L19.2425 17.8339C18.9762 18.5598 18.5812 20.6517 19.0278 21.2402L21.7247 21.5151C23.116 21.107 22.9142 17.2025 23.6528 17.0564L26.427 17.5719C26.3497 18.9249 25.3749 20.7118 26.8693 21.5194C27.8528 21.6139 28.9736 21.747 29.7595 21.0426C30.6312 19.7024 28.4196 15.2438 28.8233 14.9216L32.0054 14.1184L32.0097 14.1055Z"
-                  fill="#6D2DD3" />
-              </svg>
-            </div>
-            <div class="text-left py-1.5 pr-1 flex flex-col justify-center">
-              <p class="text-neutral-800 font-medium text-base">Join Madrasa community</p>
-              <p class="text-neutral-400 text-sm">
-                Get updates first. Enjoy early access.
-              </p>
-            </div>
-          </button>
+            <button
+              class="flex w-full gap-2 shrink-0 items-stretch  justify-start border-neutral-200 active:outline-none focus:outline-none border rounded-xl overflow-clip"
+              id="community—button">
+              <div
+                class="flex h-full max-w-[72px] shrink-0 flex-col justify-center items-center self-stretch [background:#EFEEFF] px-[18px] py-[24px]">
+                <svg class="w-7 h-7 aspect-square" viewBox="0 0 34 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M0.798758 13.5435L0 10.6484C1.82512 10.309 4.84837 8.32455 5.24775 6.45174C5.68578 4.40712 4.29869 2.91231 3.9852 1.06527L6.7422 0C10.9164 5.62702 7.4293 12.6329 0.794463 13.5435H0.798758Z"
+                    fill="#6D2DD3" />
+                  <path
+                    d="M20.2862 8.56627C21.0635 9.43824 22.9058 9.43394 23.6358 8.47177C24.8211 6.90823 25.053 4.99247 26.8781 3.72961C30.7688 1.03208 35.2951 5.85155 33.6546 9.97517C32.3577 13.2268 28.4713 12.7543 25.8904 11.3368C23.7045 12.793 20.8874 13.0851 18.7531 11.3712C16.6832 12.7973 14.2912 12.866 11.8949 12.3033C11.4312 12.1959 9.76063 11.8007 9.8637 11.208L10.9072 8.64359C12.2729 9.23206 16.928 9.96228 16.3783 7.56973C16.0648 6.19948 13.8231 3.23134 13.8188 2.64716C13.8188 2.2348 15.747 0.920398 16.0906 0.911807C16.9537 0.894626 18.6457 4.33097 19.0151 5.18576C19.3844 6.04056 19.7408 7.96061 20.2862 8.57056V8.56627ZM28.6259 6.27251C26.2425 8.635 27.8314 9.51986 30.6013 9.05165C31.413 8.51902 30.4253 6.57748 29.6093 6.28539L28.6259 6.27251Z"
+                    fill="#6D2DD3" />
+                  <path
+                    d="M32.0097 14.1055C33.0232 17.632 34.7753 23.07 30.1546 24.6207C28.5828 25.149 25.3921 25.338 24.8252 23.418H24.4301C24.1853 23.5254 24.1338 23.9678 23.9491 24.131C22.4891 25.4368 18.2591 25.3552 17.2456 23.418C15.6395 25.2306 12.1739 25.4068 10.0439 24.4961C9.21078 24.1396 8.2746 22.9712 7.84087 22.1723C7.08076 20.772 6.94764 18.1002 4.50842 19.4576C2.55017 20.5486 3.38329 22.2067 3.80843 23.9463C2.88084 23.8862 1.21462 25.1576 0.66064 24.0365C-1.67981 19.2944 2.58882 15.218 7.34272 16.0255C10.6966 16.5925 9.60157 20.9825 11.9764 21.5022C15.5235 22.2797 15.6781 20.1363 16.0475 17.297L19.2425 17.8339C18.9762 18.5598 18.5812 20.6517 19.0278 21.2402L21.7247 21.5151C23.116 21.107 22.9142 17.2025 23.6528 17.0564L26.427 17.5719C26.3497 18.9249 25.3749 20.7118 26.8693 21.5194C27.8528 21.6139 28.9736 21.747 29.7595 21.0426C30.6312 19.7024 28.4196 15.2438 28.8233 14.9216L32.0054 14.1184L32.0097 14.1055Z"
+                    fill="#6D2DD3" />
+                </svg>
+              </div>
+              <div class="text-left py-1.5 pr-1 flex flex-col justify-center">
+                <p class="text-neutral-800 font-medium text-base">Join Madrasa community</p>
+                <p class="text-neutral-400 text-sm">
+                  Get updates first. Enjoy early access.
+                </p>
+              </div>
+            </button>
+          </a>
 
           <button id="contact-button"
             class="flex gap-2 w-full shrink-0 items-stretch justify-start border-neutral-200 active:outline-none focus:outline-none border rounded-xl overflow-clip">
@@ -730,39 +741,40 @@
       <div class="flex items-center gap-2.5 justify-center flex-wrap pt-7 md:justify-start md:max-w-md">
 
         <!-- Social Pill -->
-        <a class="bg-white shadow-[0px_2px_4px_-2px_rgba(229,229,229,1.00)] shadow-[0px_4px_8px_-2px_rgba(229,229,229,1.00)] flex items-center justify-between px-2.5 py-1.5 rounded-full gap-1.5" href="https://www.facebook.com/share/1UwjhQQKUQ/?mibextid=wwXIfr"
-          target="_blank">
+        <a class="bg-white shadow-[0px_2px_4px_-2px_rgba(229,229,229,1.00)] shadow-[0px_4px_8px_-2px_rgba(229,229,229,1.00)] flex items-center justify-between px-2.5 py-1.5 rounded-full gap-1.5"
+          href="https://www.facebook.com/share/1UwjhQQKUQ/?mibextid=wwXIfr" target="_blank">
           <img src="./src/icons/facebook.svg" alt="facebook">
           <p class="font-geist text-neutral-900 font-medium leading-tight">Facebook</p>
         </a>
 
-        <a class="bg-white shadow-[0px_2px_4px_-2px_rgba(229,229,229,1.00)] shadow-[0px_4px_8px_-2px_rgba(229,229,229,1.00)] flex items-center justify-between px-2.5 py-1.5 rounded-full gap-1.5" href="https://www.instagram.com/madrasa.app/"
-          target="_blank">
+        <a class="bg-white shadow-[0px_4px_8px_-2px_rgba(229,229,229,1.00)] flex items-center justify-between px-2.5 py-1.5 rounded-full gap-1.5"
+          href="https://www.instagram.com/madrasa.app/" target="_blank">
           <img src="./src/icons/instagram.svg" alt="instagram">
           <p class="font-geist text-neutral-900 font-medium leading-tight">Instagram</p>
         </a>
 
-        <a class="bg-white shadow-[0px_2px_4px_-2px_rgba(229,229,229,1.00)] shadow-[0px_4px_8px_-2px_rgba(229,229,229,1.00)] flex items-center justify-between px-2.5 py-1.5 rounded-full gap-1.5" href="https://www.reddit.com/u/MadrasaApp/s/FD5CNQuIB9"
-          target="_blank">
+        <a class="bg-white shadow-[0px_4px_8px_-2px_rgba(229,229,229,1.00)] flex items-center justify-between px-2.5 py-1.5 rounded-full gap-1.5"
+          href="https://www.reddit.com/u/MadrasaApp/s/FD5CNQuIB9" target="_blank">
           <img src="./src/icons/reddit.svg" alt="reddit">
           <p class="font-geist text-neutral-900 font-medium leading-tight">Reddit</p>
         </a>
 
-        <a class="bg-white shadow-[0px_2px_4px_-2px_rgba(229,229,229,1.00)] shadow-[0px_4px_8px_-2px_rgba(229,229,229,1.00)] flex items-center justify-between px-2.5 py-1.5 rounded-full gap-1.5" href="https://www.linkedin.com/company/madrasaapp"
-          target="_blank">
+        <a class="bg-white shadow-[0px_2px_4px_-2px_rgba(229,229,229,1.00)] flex items-center justify-between px-2.5 py-1.5 rounded-full gap-1.5"
+          href="https://www.linkedin.com/company/madrasaapp" target="_blank">
           <img src="./src/icons/linkedin.svg" alt="linkedin">
           <p class="font-geist text-neutral-900 font-medium leading-tight">LinkedIn</p>
         </a>
 
-        <a class="bg-white shadow-[0px_2px_4px_-2px_rgba(229,229,229,1.00)] shadow-[0px_4px_8px_-2px_rgba(229,229,229,1.00)] flex items-center justify-between px-2.5 py-1.5 rounded-full gap-1.5" href="#"
-          target="_blank">
+        <a class="bg-white shadow-[0px_2px_4px_-2px_rgba(229,229,229,1.00)] flex items-center justify-between px-2.5 py-1.5 rounded-full gap-1.5"
+          href="https://chat.whatsapp.com/Keu3aytIDbg5uJoOpxR4mD" target="_blank">
           <img src="./src/icons/whatsapp.svg" alt="whatsapp community">
           <p class="font-geist text-neutral-900 font-medium leading-tight">Join Community</p>
         </a>
       </div>
     </div>
     <img src="/footer_mobile_img.svg" alt="made with love" class="mx-auto pt-14 pb-8 md:hidden md:py-2 lg:hidden">
-    <img src="/footer_img.svg" alt="made with love" class="mx-auto pt-14 pb-10 hidden md:block md:py-2 lg:block lg:mx-0">
+    <img src="/footer_img.svg" alt="made with love"
+      class="mx-auto pt-14 pb-10 hidden md:block md:py-2 lg:block lg:mx-0">
   </footer>
   </div>
   <script type="module" src="./src/main.ts"></script>
